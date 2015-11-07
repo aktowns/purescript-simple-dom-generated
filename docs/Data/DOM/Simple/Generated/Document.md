@@ -633,7 +633,7 @@ caretRangeFromPointImpl :: forall eff a. a -> Int -> Int -> Eff (dom :: DOM | ef
 #### `getCSSCanvasContextImpl`
 
 ``` purescript
-getCSSCanvasContextImpl :: forall eff a b. a -> String -> String -> Int -> Int -> Eff (dom :: DOM | eff) b
+getCSSCanvasContextImpl :: forall eff a anyVal. a -> String -> String -> Int -> Int -> Eff (dom :: DOM | eff) anyVal
 ```
 
 #### `getWebkitVisibilityStateImpl`
@@ -889,7 +889,7 @@ class Document a where
   getCharset :: forall eff. a -> Eff (dom :: DOM | eff) String
   getDefaultCharset :: forall eff. a -> Eff (dom :: DOM | eff) String
   caretRangeFromPoint :: forall eff. a -> Int -> Int -> Eff (dom :: DOM | eff) Range
-  getCSSCanvasContext :: forall eff b. a -> String -> String -> Int -> Int -> Eff (dom :: DOM | eff) b
+  getCSSCanvasContext :: forall eff anyVal. a -> String -> String -> Int -> Int -> Eff (dom :: DOM | eff) anyVal
   getWebkitVisibilityState :: forall eff. a -> Eff (dom :: DOM | eff) String
   getWebkitHidden :: forall eff. a -> Eff (dom :: DOM | eff) Boolean
   getOnbeforecopy :: forall eff. a -> Eff (dom :: DOM | eff) EventHandler

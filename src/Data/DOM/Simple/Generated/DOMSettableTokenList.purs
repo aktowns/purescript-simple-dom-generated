@@ -10,10 +10,12 @@ import Data.DOM.Simple.Types
 
 foreign import getValueImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (String)
 foreign import setValueImpl :: forall eff a. String -> Eff (dom :: DOM | eff) (Unit)
--- foreign import nullImpl :: forall eff a. a -> Int -> Eff (dom :: DOM | eff) (Maybe String)
 
 class DOMSettableTokenList a where
   getValue :: forall eff. a -> Eff (dom :: DOM | eff) (String)
   setValue :: forall eff. String -> Eff (dom :: DOM | eff) (Unit)
---  null :: forall eff. a -> Int -> Eff (dom :: DOM | eff) (Maybe String)
+  -- Not implemented: Null named attributes
+  -- implements:
   -- inherited:
+
+

@@ -3,7 +3,10 @@
 #### `Comment`
 
 ``` purescript
-class Comment a
+class Comment a where
+  getPreviousElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) Element
+  getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) Element
+  remove :: forall eff. a -> Eff (dom :: DOM | eff) Unit
 ```
 
 

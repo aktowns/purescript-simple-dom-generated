@@ -25,15 +25,7 @@ exports.getNamedItemImpl = function (targetEl) {
 };
 };
 };
-// args: String
-// returns: Eff (dom :: DOM | eff) (Maybe Attr)
-exports.nullImpl = function (targetEl) {
- return function (name) {
- return function () {
- return targetEl.null(name);
-};
-};
-};
+// Not implemented: Null named attributes
 // args: Maybe String, String
 // returns: Eff (dom :: DOM | eff) (Maybe Attr)
 exports.getNamedItemNSImpl = function (targetEl) {

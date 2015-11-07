@@ -22,6 +22,7 @@ class ClientRect a where
   getLeft :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   getWidth :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   getHeight :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
+  -- implements:
   -- inherited:
 
 

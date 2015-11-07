@@ -14,6 +14,7 @@ foreign import getMessageImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Stri
 class DOMError a where
   getName :: forall eff. a -> Eff (dom :: DOM | eff) (String)
   getMessage :: forall eff. a -> Eff (dom :: DOM | eff) (String)
+  -- implements:
   -- inherited:
 
 

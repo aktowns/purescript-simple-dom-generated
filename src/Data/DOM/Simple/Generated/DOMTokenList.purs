@@ -14,7 +14,6 @@ foreign import containsImpl :: forall eff a. a -> String -> Eff (dom :: DOM | ef
 foreign import addImpl :: forall eff a. a -> String -> Eff (dom :: DOM | eff) (Unit)
 foreign import removeImpl :: forall eff a. a -> String -> Eff (dom :: DOM | eff) (Unit)
 foreign import toggleImpl :: forall eff a. a -> String -> Boolean -> Eff (dom :: DOM | eff) (Boolean)
--- foreign import undefinedImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (undefined)
 
 class DOMTokenList a where
   getLength :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
@@ -23,6 +22,8 @@ class DOMTokenList a where
   add :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Unit)
   remove :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Unit)
   toggle :: forall eff. a -> String -> Boolean -> Eff (dom :: DOM | eff) (Boolean)
---  undefined :: forall eff. a -> Eff (dom :: DOM | eff) (undefined)
   -- Not implemented: iterable
+  -- implements:
   -- inherited:
+
+

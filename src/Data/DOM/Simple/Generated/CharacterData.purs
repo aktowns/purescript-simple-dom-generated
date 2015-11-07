@@ -26,9 +26,10 @@ class CharacterData a where
   insertData :: forall eff. a -> Int -> String -> Eff (dom :: DOM | eff) (Unit)
   deleteData :: forall eff. a -> Int -> Int -> Eff (dom :: DOM | eff) (Unit)
   replaceData :: forall eff. a -> Int -> Int -> String -> Eff (dom :: DOM | eff) (Unit)
-  -- inherited:
+  -- implements:
   getPreviousElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
   getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
   remove :: forall eff. a -> Eff (dom :: DOM | eff) (Unit)
+  -- inherited:
 
 

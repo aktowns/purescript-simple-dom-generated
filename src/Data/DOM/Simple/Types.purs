@@ -56,3 +56,4 @@ foreign import data HTMLElement                :: *
 foreign import data Location                   :: *
 foreign import data DocumentReadyState         :: *
 foreign import data CustomElementConstructor   :: *
+foreign import data ScrollToOptions            :: *

@@ -26,6 +26,7 @@ class NodeIterator a where
   nextNode :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe Node)
   previousNode :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe Node)
   detach :: forall eff. a -> Eff (dom :: DOM | eff) (Unit)
+  -- implements:
   -- inherited:
 
 

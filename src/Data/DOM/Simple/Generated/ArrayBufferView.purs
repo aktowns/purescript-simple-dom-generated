@@ -16,6 +16,7 @@ class ArrayBufferView a where
   getBuffer :: forall eff. a -> Eff (dom :: DOM | eff) (ArrayBuffer)
   getByteOffset :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   getByteLength :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
+  -- implements:
   -- inherited:
 
 

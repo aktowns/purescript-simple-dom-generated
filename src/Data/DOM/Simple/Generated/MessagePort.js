@@ -2,7 +2,7 @@
 
 // module Data.DOM.Simple.Generated.MessagePort
 
-// args: any, Array Transferable
+// args: anyVal, Array Transferable
 // returns: Eff (dom :: DOM | eff) (Unit)
 exports.postMessageImpl = function (targetEl) {
  return function (message) {

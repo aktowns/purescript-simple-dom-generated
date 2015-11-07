@@ -11,6 +11,7 @@ import Data.DOM.Simple.Types
 
 
 class CDATASection a where
+  -- implements:
   -- inherited:
 
 

@@ -14,6 +14,10 @@ foreign import getSheetImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (StyleS
 class ProcessingInstruction a where
   getTarget :: forall eff. a -> Eff (dom :: DOM | eff) (String)
   getSheet :: forall eff. a -> Eff (dom :: DOM | eff) (StyleSheet)
+  -- implements:
   -- inherited:
+  getPreviousElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
+  getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
+  remove :: forall eff. a -> Eff (dom :: DOM | eff) (Unit)
 
 

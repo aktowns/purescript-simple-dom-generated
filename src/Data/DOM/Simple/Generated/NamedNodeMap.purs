@@ -21,9 +21,13 @@ class NamedNodeMap a where
   getLength :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   item :: forall eff. a -> Int -> Eff (dom :: DOM | eff) (Maybe Attr)
   getNamedItem :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Maybe Attr)
+  -- Not implemented: Null named attributes
   getNamedItemNS :: forall eff. a -> Maybe String -> String -> Eff (dom :: DOM | eff) (Maybe Attr)
   setNamedItem :: forall eff. a -> Attr -> Eff (dom :: DOM | eff) (Maybe Attr)
   setNamedItemNS :: forall eff. a -> Attr -> Eff (dom :: DOM | eff) (Maybe Attr)
   removeNamedItem :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Attr)
   removeNamedItemNS :: forall eff. a -> Maybe String -> String -> Eff (dom :: DOM | eff) (Attr)
+  -- implements:
   -- inherited:
+
+

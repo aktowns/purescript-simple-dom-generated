@@ -14,6 +14,7 @@ foreign import itemImpl :: forall eff a. a -> Int -> Eff (dom :: DOM | eff) (May
 class TouchList a where
   getLength :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   item :: forall eff. a -> Int -> Eff (dom :: DOM | eff) (Maybe Touch)
+  -- implements:
   -- inherited:
 
 

@@ -14,6 +14,7 @@ foreign import getLengthImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Int)
 class NodeList a where
   item :: forall eff. a -> Int -> Eff (dom :: DOM | eff) (Maybe Node)
   getLength :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
+  -- implements:
   -- inherited:
 
 

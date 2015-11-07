@@ -34,6 +34,7 @@ class Attr a where
   setTextContent :: forall eff. String -> Eff (dom :: DOM | eff) (Unit)
   getOwnerElement :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe Element)
   getSpecified :: forall eff. a -> Eff (dom :: DOM | eff) (Boolean)
+  -- implements:
   -- inherited:
 
 

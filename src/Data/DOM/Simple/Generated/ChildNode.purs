@@ -12,6 +12,7 @@ foreign import removeImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Unit)
 
 class ChildNode a where
   remove :: forall eff. a -> Eff (dom :: DOM | eff) (Unit)
+  -- implements:
   -- inherited:
 
 

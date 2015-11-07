@@ -3,7 +3,7 @@
 #### `postMessageImpl`
 
 ``` purescript
-postMessageImpl :: forall eff a b. a -> b -> Array Transferable -> Eff (dom :: DOM | eff) Unit
+postMessageImpl :: forall eff a anyVal. a -> anyVal -> Array Transferable -> Eff (dom :: DOM | eff) Unit
 ```
 
 #### `startImpl`
@@ -34,7 +34,7 @@ setOnmessageImpl :: forall eff a. EventHandler -> Eff (dom :: DOM | eff) Unit
 
 ``` purescript
 class MessagePort a where
-  postMessage :: forall eff b. a -> b -> Array Transferable -> Eff (dom :: DOM | eff) Unit
+  postMessage :: forall eff anyVal. a -> anyVal -> Array Transferable -> Eff (dom :: DOM | eff) Unit
   start :: forall eff. a -> Eff (dom :: DOM | eff) Unit
   close :: forall eff. a -> Eff (dom :: DOM | eff) Unit
   getOnmessage :: forall eff. a -> Eff (dom :: DOM | eff) EventHandler

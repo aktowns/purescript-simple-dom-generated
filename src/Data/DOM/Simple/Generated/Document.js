@@ -636,7 +636,7 @@ exports.exitPointerLockImpl = function (targetEl) {
  return {};
 };
 };
-// args: Window, EventTarget, Int, Int, Int, Int, Int, Int, Int, unrestricted float, unrestricted float
+// args: Window, EventTarget, Int, Int, Int, Int, Int, Int, Int, Int, Int
 // returns: Eff (dom :: DOM | eff) (Touch)
 exports.createTouchImpl = function (targetEl) {
  return function (window) {
@@ -793,7 +793,7 @@ exports.caretRangeFromPointImpl = function (targetEl) {
 };
 };
 // args: String, String, Int, Int
-// returns: Eff (dom :: DOM | eff) (any)
+// returns: Eff (dom :: DOM | eff) (anyVal)
 exports.getCSSCanvasContextImpl = function (targetEl) {
  return function (contextId) {
  return function (name) {

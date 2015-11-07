@@ -26,6 +26,7 @@ class DOMPoint a where
   setZ :: forall eff. Int -> Eff (dom :: DOM | eff) (Unit)
   getW :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   setW :: forall eff. Int -> Eff (dom :: DOM | eff) (Unit)
+  -- implements:
   -- inherited:
 
 

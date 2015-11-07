@@ -34,6 +34,7 @@ class TreeWalker a where
   nextSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe Node)
   previousNode :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe Node)
   nextNode :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe Node)
+  -- implements:
   -- inherited:
 
 

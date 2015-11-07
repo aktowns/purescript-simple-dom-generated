@@ -56,11 +56,4 @@ exports.toggleImpl = function (targetEl) {
 };
 };
 };
-// args: 
-// returns: Eff (dom :: DOM | eff) (undefined)
-exports.undefinedImpl = function (targetEl) {
- return function () {
- return targetEl.undefined();
-};
-};
 // Not implemented: iterable

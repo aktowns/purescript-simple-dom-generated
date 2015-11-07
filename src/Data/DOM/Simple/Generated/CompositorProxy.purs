@@ -30,6 +30,7 @@ class CompositorProxy a where
   setTransform :: forall eff. DOMMatrix -> Eff (dom :: DOM | eff) (Unit)
   supports :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Boolean)
   disconnect :: forall eff. a -> Eff (dom :: DOM | eff) (Unit)
+  -- implements:
   -- inherited:
 
 

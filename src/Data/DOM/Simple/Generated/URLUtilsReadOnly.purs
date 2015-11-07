@@ -30,6 +30,7 @@ class URLUtilsReadOnly a where
   getPathname :: forall eff. a -> Eff (dom :: DOM | eff) (USVString)
   getSearch :: forall eff. a -> Eff (dom :: DOM | eff) (USVString)
   getHash :: forall eff. a -> Eff (dom :: DOM | eff) (USVString)
+  -- implements:
   -- inherited:
 
 

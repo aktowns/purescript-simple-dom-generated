@@ -54,6 +54,7 @@ class URLUtils a where
   setSearch :: forall eff. USVString -> Eff (dom :: DOM | eff) (Unit)
   getHash :: forall eff. a -> Eff (dom :: DOM | eff) (USVString)
   setHash :: forall eff. USVString -> Eff (dom :: DOM | eff) (Unit)
+  -- implements:
   -- inherited:
 
 

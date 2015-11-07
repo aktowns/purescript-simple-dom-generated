@@ -14,7 +14,7 @@ foreign import revokeObjectURLImpl :: forall eff a. a -> String -> Eff (dom :: D
 class URL a where
   createObjectURL :: forall eff. a -> Maybe Blob -> Eff (dom :: DOM | eff) (Maybe String)
   revokeObjectURL :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Unit)
-  -- inherited:
+  -- implements:
   getHref :: forall eff. a -> Eff (dom :: DOM | eff) (USVString)
   setHref :: forall eff. USVString -> Eff (dom :: DOM | eff) (Unit)
   toString :: forall eff. a -> Eff (dom :: DOM | eff) (USVString)
@@ -37,5 +37,6 @@ class URL a where
   setSearch :: forall eff. USVString -> Eff (dom :: DOM | eff) (Unit)
   getHash :: forall eff. a -> Eff (dom :: DOM | eff) (USVString)
   setHash :: forall eff. USVString -> Eff (dom :: DOM | eff) (Unit)
+  -- inherited:
 
 

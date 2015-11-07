@@ -26,6 +26,7 @@ class DOMRect a where
   setWidth :: forall eff. Int -> Eff (dom :: DOM | eff) (Unit)
   getHeight :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   setHeight :: forall eff. Int -> Eff (dom :: DOM | eff) (Unit)
+  -- implements:
   -- inherited:
 
 

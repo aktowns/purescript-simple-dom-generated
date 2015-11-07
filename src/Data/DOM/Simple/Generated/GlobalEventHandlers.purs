@@ -286,6 +286,7 @@ class GlobalEventHandlers a where
   setOnvolumechange :: forall eff. EventHandler -> Eff (dom :: DOM | eff) (Unit)
   getOnwaiting :: forall eff. a -> Eff (dom :: DOM | eff) (EventHandler)
   setOnwaiting :: forall eff. EventHandler -> Eff (dom :: DOM | eff) (Unit)
+  -- implements:
   -- inherited:
 
 

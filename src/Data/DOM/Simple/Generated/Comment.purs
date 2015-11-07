@@ -11,6 +11,10 @@ import Data.DOM.Simple.Types
 
 
 class Comment a where
+  -- implements:
   -- inherited:
+  getPreviousElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
+  getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
+  remove :: forall eff. a -> Eff (dom :: DOM | eff) (Unit)
 
 

@@ -230,13 +230,6 @@ exports.intersectsNodeImpl = function (targetEl) {
 };
 };
 // args: 
-// returns: Eff (dom :: DOM | eff) (undefined)
-exports.undefinedImpl = function (targetEl) {
- return function () {
- return targetEl.undefined();
-};
-};
-// args: 
 // returns: Eff (dom :: DOM | eff) (ClientRectList)
 exports.getClientRectsImpl = function (targetEl) {
  return function () {

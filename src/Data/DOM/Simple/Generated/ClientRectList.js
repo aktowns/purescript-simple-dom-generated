@@ -16,12 +16,4 @@ exports.itemImpl = function (targetEl) {
 };
 };
 };
-// args: Int
-// returns: Eff (dom :: DOM | eff) (ClientRect)
-exports.nullImpl = function (targetEl) {
- return function (index) {
- return function () {
- return targetEl.null(index);
-};
-};
-};
+// Not implemented: Null named attributes

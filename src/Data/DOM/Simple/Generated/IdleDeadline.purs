@@ -14,6 +14,7 @@ foreign import getDidTimeoutImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (B
 class IdleDeadline a where
   timeRemaining :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   getDidTimeout :: forall eff. a -> Eff (dom :: DOM | eff) (Boolean)
+  -- implements:
   -- inherited:
 
 

@@ -34,7 +34,6 @@ foreign import detachImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Unit)
 foreign import isPointInRangeImpl :: forall eff a. a -> Node -> Int -> Eff (dom :: DOM | eff) (Boolean)
 foreign import comparePointImpl :: forall eff a. a -> Node -> Int -> Eff (dom :: DOM | eff) (Int)
 foreign import intersectsNodeImpl :: forall eff a. a -> Node -> Eff (dom :: DOM | eff) (Boolean)
---foreign import undefinedImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (undefined)
 foreign import getClientRectsImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (ClientRectList)
 foreign import getBoundingClientRectImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (ClientRect)
 foreign import createContextualFragmentImpl :: forall eff a. a -> String -> Eff (dom :: DOM | eff) (DocumentFragment)
@@ -71,9 +70,11 @@ class Range a where
   isPointInRange :: forall eff. a -> Node -> Int -> Eff (dom :: DOM | eff) (Boolean)
   comparePoint :: forall eff. a -> Node -> Int -> Eff (dom :: DOM | eff) (Int)
   intersectsNode :: forall eff. a -> Node -> Eff (dom :: DOM | eff) (Boolean)
-  --undefined :: forall eff. a -> Eff (dom :: DOM | eff) (undefined)
   getClientRects :: forall eff. a -> Eff (dom :: DOM | eff) (ClientRectList)
   getBoundingClientRect :: forall eff. a -> Eff (dom :: DOM | eff) (ClientRect)
   createContextualFragment :: forall eff. a -> String -> Eff (dom :: DOM | eff) (DocumentFragment)
   expand :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Unit)
+  -- implements:
   -- inherited:
+
+

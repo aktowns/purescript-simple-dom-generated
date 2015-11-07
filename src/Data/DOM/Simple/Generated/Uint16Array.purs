@@ -11,6 +11,7 @@ import Data.DOM.Simple.Types
 
 
 class Uint16Array a where
+  -- implements:
   -- inherited:
 
 

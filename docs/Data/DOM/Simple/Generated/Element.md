@@ -249,19 +249,19 @@ scrollIntoViewImpl :: forall eff a. a -> Boolean -> Eff (dom :: DOM | eff) Unit
 #### `scrollImpl`
 
 ``` purescript
-scrollImpl :: forall eff a. a -> Int -> Int -> Eff (dom :: DOM | eff) Unit
+scrollImpl :: forall eff a. a -> ScrollToOptions -> Eff (dom :: DOM | eff) Unit
 ```
 
 #### `scrollToImpl`
 
 ``` purescript
-scrollToImpl :: forall eff a. a -> Int -> Int -> Eff (dom :: DOM | eff) Unit
+scrollToImpl :: forall eff a. a -> ScrollToOptions -> Eff (dom :: DOM | eff) Unit
 ```
 
 #### `scrollByImpl`
 
 ``` purescript
-scrollByImpl :: forall eff a. a -> Int -> Int -> Eff (dom :: DOM | eff) Unit
+scrollByImpl :: forall eff a. a -> ScrollToOptions -> Eff (dom :: DOM | eff) Unit
 ```
 
 #### `getScrollTopImpl`
@@ -573,9 +573,9 @@ class Element a where
   getClientRects :: forall eff. a -> Eff (dom :: DOM | eff) ClientRectList
   getBoundingClientRect :: forall eff. a -> Eff (dom :: DOM | eff) ClientRect
   scrollIntoView :: forall eff. a -> Boolean -> Eff (dom :: DOM | eff) Unit
-  scroll :: forall eff. a -> Int -> Int -> Eff (dom :: DOM | eff) Unit
-  scrollTo :: forall eff. a -> Int -> Int -> Eff (dom :: DOM | eff) Unit
-  scrollBy :: forall eff. a -> Int -> Int -> Eff (dom :: DOM | eff) Unit
+  scroll :: forall eff. a -> ScrollToOptions -> Eff (dom :: DOM | eff) Unit
+  scrollTo :: forall eff. a -> ScrollToOptions -> Eff (dom :: DOM | eff) Unit
+  scrollBy :: forall eff. a -> ScrollToOptions -> Eff (dom :: DOM | eff) Unit
   getScrollTop :: forall eff. a -> Eff (dom :: DOM | eff) Int
   setScrollTop :: forall eff. Int -> Eff (dom :: DOM | eff) Unit
   getScrollLeft :: forall eff. a -> Eff (dom :: DOM | eff) Int

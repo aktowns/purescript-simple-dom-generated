@@ -113,7 +113,7 @@ foreign import getVisibilityStateImpl :: forall eff a. a -> Eff (dom :: DOM | ef
 foreign import getCharsetImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (String)
 foreign import getDefaultCharsetImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (String)
 foreign import caretRangeFromPointImpl :: forall eff a. a -> Int -> Int -> Eff (dom :: DOM | eff) (Range)
-foreign import getCSSCanvasContextImpl :: forall eff a b. a -> String -> String -> Int -> Int -> Eff (dom :: DOM | eff) (b)
+foreign import getCSSCanvasContextImpl :: forall eff a anyVal. a -> String -> String -> Int -> Int -> Eff (dom :: DOM | eff) (anyVal)
 foreign import getWebkitVisibilityStateImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (String)
 foreign import getWebkitHiddenImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Boolean)
 foreign import getOnbeforecopyImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (EventHandler)
@@ -245,7 +245,7 @@ class Document a where
   getCharset :: forall eff. a -> Eff (dom :: DOM | eff) (String)
   getDefaultCharset :: forall eff. a -> Eff (dom :: DOM | eff) (String)
   caretRangeFromPoint :: forall eff. a -> Int -> Int -> Eff (dom :: DOM | eff) (Range)
-  getCSSCanvasContext :: forall eff b. a -> String -> String -> Int -> Int -> Eff (dom :: DOM | eff) (b)
+  getCSSCanvasContext :: forall eff anyVal. a -> String -> String -> Int -> Int -> Eff (dom :: DOM | eff) (anyVal)
   getWebkitVisibilityState :: forall eff. a -> Eff (dom :: DOM | eff) (String)
   getWebkitHidden :: forall eff. a -> Eff (dom :: DOM | eff) (Boolean)
   getOnbeforecopy :: forall eff. a -> Eff (dom :: DOM | eff) (EventHandler)
@@ -270,7 +270,7 @@ class Document a where
   setOnselectstart :: forall eff. EventHandler -> Eff (dom :: DOM | eff) (Unit)
   getOnwheel :: forall eff. a -> Eff (dom :: DOM | eff) (EventHandler)
   setOnwheel :: forall eff. EventHandler -> Eff (dom :: DOM | eff) (Unit)
-  -- inherited:
+  -- implements:
   getElementById :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Maybe Element)
   getChildren :: forall eff. a -> Eff (dom :: DOM | eff) (HTMLCollection)
   getFirstElementChild :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe Element)
@@ -416,3 +416,4 @@ class Document a where
   setOnvolumechange :: forall eff. EventHandler -> Eff (dom :: DOM | eff) (Unit)
   getOnwaiting :: forall eff. a -> Eff (dom :: DOM | eff) (EventHandler)
   setOnwaiting :: forall eff. EventHandler -> Eff (dom :: DOM | eff) (Unit)
+  -- inherited:

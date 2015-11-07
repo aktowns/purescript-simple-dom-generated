@@ -25,6 +25,9 @@ class Text a where
   splitText :: forall eff. a -> Int -> Eff (dom :: DOM | eff) Text
   getWholeText :: forall eff. a -> Eff (dom :: DOM | eff) String
   getDestinationInsertionPoints :: forall eff. a -> Eff (dom :: DOM | eff) NodeList
+  getPreviousElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) Element
+  getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) Element
+  remove :: forall eff. a -> Eff (dom :: DOM | eff) Unit
 ```
 
 

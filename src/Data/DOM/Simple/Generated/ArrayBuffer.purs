@@ -12,6 +12,7 @@ foreign import getByteLengthImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (I
 
 class ArrayBuffer a where
   getByteLength :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
+  -- implements:
   -- inherited:
 
 

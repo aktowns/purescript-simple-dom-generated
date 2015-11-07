@@ -22,6 +22,7 @@ class ParentNode a where
   getChildElementCount :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   querySelector :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Maybe Element)
   querySelectorAll :: forall eff. a -> String -> Eff (dom :: DOM | eff) (NodeList)
+  -- implements:
   -- inherited:
 
 

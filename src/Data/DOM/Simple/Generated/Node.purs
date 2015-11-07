@@ -86,6 +86,7 @@ class Node a where
   replaceChild :: forall eff. a -> Node -> Node -> Eff (dom :: DOM | eff) (Node)
   removeChild :: forall eff. a -> Node -> Eff (dom :: DOM | eff) (Node)
   isSameNode :: forall eff. a -> Maybe Node -> Eff (dom :: DOM | eff) (Boolean)
+  -- implements:
   -- inherited:
 
 

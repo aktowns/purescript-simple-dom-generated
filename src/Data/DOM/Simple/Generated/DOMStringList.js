@@ -7,15 +7,7 @@ exports.getLengthImpl = function (targetEl) {
  return targetEl.length;
 };
 };
-// args: Int
-// returns: Eff (dom :: DOM | eff) (Maybe String)
-exports.nullImpl = function (targetEl) {
- return function (index) {
- return function () {
- return targetEl.null(index);
-};
-};
-};
+// Not implemented: Null named attributes
 // args: Int
 // returns: Eff (dom :: DOM | eff) (Maybe String)
 exports.itemImpl = function (targetEl) {

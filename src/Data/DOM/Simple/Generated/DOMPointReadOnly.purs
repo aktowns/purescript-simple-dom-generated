@@ -18,6 +18,7 @@ class DOMPointReadOnly a where
   getY :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   getZ :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   getW :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
+  -- implements:
   -- inherited:
 
 

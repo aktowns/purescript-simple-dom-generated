@@ -28,6 +28,7 @@ class NodeFilter a where
   -- type SHOW_DOCUMENT_FRAGMENT = 1024
   -- type SHOW_NOTATION = 2048
   acceptNode :: forall eff. a -> Node -> Eff (dom :: DOM | eff) (Int)
+  -- implements:
   -- inherited:
 
 

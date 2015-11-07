@@ -336,4 +336,10 @@ data DocumentReadyState :: *
 data CustomElementConstructor :: *
 ```
 
+#### `ScrollToOptions`
+
+``` purescript
+data ScrollToOptions :: *
+```
+
 

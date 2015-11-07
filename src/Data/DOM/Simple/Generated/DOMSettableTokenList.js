@@ -15,12 +15,4 @@ exports.setValueImpl = function (targetEl) {
 };
 };
 };
-// args: Int
-// returns: Eff (dom :: DOM | eff) (Maybe String)
-exports.nullImpl = function (targetEl) {
- return function (index) {
- return function () {
- return targetEl.null(index);
-};
-};
-};
+// Not implemented: Null named attributes

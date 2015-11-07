@@ -8,8 +8,11 @@ import Control.Monad.Eff
 import DOM
 import Data.DOM.Simple.Types
 
-foreign import nextImpl :: forall eff a b. a -> b -> Eff (dom :: DOM | eff) (b)
+foreign import nextImpl :: forall eff a anyVal. a -> anyVal -> Eff (dom :: DOM | eff) (anyVal)
 
 class Iterator a where
-  next :: forall eff b. a -> b -> Eff (dom :: DOM | eff) (b)
+  next :: forall eff anyVal. a -> anyVal -> Eff (dom :: DOM | eff) (anyVal)
+  -- implements:
   -- inherited:
+
+

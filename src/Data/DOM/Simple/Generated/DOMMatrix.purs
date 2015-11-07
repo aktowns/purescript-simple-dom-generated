@@ -110,6 +110,7 @@ class DOMMatrix a where
   scaleSelf :: forall eff. a -> Int -> Int -> Int -> Eff (dom :: DOM | eff) (DOMMatrix)
   scale3dSelf :: forall eff. a -> Int -> Int -> Int -> Int -> Eff (dom :: DOM | eff) (DOMMatrix)
   scaleNonUniformSelf :: forall eff. a -> Int -> Int -> Int -> Int -> Int -> Int -> Eff (dom :: DOM | eff) (DOMMatrix)
+  -- implements:
   -- inherited:
 
 

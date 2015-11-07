@@ -16,6 +16,7 @@ class MutationObserver a where
   observe :: forall eff. a -> Node -> MutationObserverInit -> Eff (dom :: DOM | eff) (Unit)
   disconnect :: forall eff. a -> Eff (dom :: DOM | eff) (Unit)
   takeRecords :: forall eff. a -> Eff (dom :: DOM | eff) (Array MutationRecord)
+  -- implements:
   -- inherited:
 
 

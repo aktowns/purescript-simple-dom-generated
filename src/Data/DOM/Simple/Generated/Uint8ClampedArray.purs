@@ -11,6 +11,7 @@ import Data.DOM.Simple.Types
 
 
 class Uint8ClampedArray a where
+  -- implements:
   -- inherited:
 
 

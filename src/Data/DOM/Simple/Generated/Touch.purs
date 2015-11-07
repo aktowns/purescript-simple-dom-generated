@@ -34,6 +34,7 @@ class Touch a where
   getRadiusY :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   getRotationAngle :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   getForce :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
+  -- implements:
   -- inherited:
 
 

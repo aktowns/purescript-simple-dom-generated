@@ -11,6 +11,7 @@ import Data.DOM.Simple.Types
 
 
 class Float64Array a where
+  -- implements:
   -- inherited:
 
 

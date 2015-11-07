@@ -10,10 +10,12 @@ import Data.DOM.Simple.Types
 
 foreign import getLengthImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Int)
 foreign import itemImpl :: forall eff a. a -> Int -> Eff (dom :: DOM | eff) (ClientRect)
---foreign import nullImpl :: forall eff a. a -> Int -> Eff (dom :: DOM | eff) (ClientRect)
 
 class ClientRectList a where
   getLength :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   item :: forall eff. a -> Int -> Eff (dom :: DOM | eff) (ClientRect)
-  --null :: forall eff. a -> Int -> Eff (dom :: DOM | eff) (ClientRect)
+  -- Not implemented: Null named attributes
+  -- implements:
   -- inherited:
+
+

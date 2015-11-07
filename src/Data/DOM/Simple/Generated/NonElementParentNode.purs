@@ -12,6 +12,7 @@ foreign import getElementByIdImpl :: forall eff a. a -> String -> Eff (dom :: DO
 
 class NonElementParentNode a where
   getElementById :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Maybe Element)
+  -- implements:
   -- inherited:
 
 

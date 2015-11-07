@@ -72,6 +72,7 @@ class DOMMatrixReadOnly a where
   multiply :: forall eff. a -> DOMMatrix -> Eff (dom :: DOM | eff) (DOMMatrix)
   toFloat32Array :: forall eff. a -> Eff (dom :: DOM | eff) (Float32Array)
   toFloat64Array :: forall eff. a -> Eff (dom :: DOM | eff) (Float64Array)
+  -- implements:
   -- inherited:
 
 

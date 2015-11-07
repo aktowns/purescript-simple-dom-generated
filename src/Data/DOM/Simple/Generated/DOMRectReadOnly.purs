@@ -26,6 +26,7 @@ class DOMRectReadOnly a where
   getRight :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   getBottom :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   getLeft :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
+  -- implements:
   -- inherited:
 
 

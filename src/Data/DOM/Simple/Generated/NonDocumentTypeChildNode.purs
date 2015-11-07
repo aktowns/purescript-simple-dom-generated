@@ -14,6 +14,7 @@ foreign import getNextElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM |
 class NonDocumentTypeChildNode a where
   getPreviousElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
   getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
+  -- implements:
   -- inherited:
 
 

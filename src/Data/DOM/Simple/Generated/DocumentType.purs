@@ -16,7 +16,8 @@ class DocumentType a where
   getName :: forall eff. a -> Eff (dom :: DOM | eff) (String)
   getPublicId :: forall eff. a -> Eff (dom :: DOM | eff) (String)
   getSystemId :: forall eff. a -> Eff (dom :: DOM | eff) (String)
-  -- inherited:
+  -- implements:
   remove :: forall eff. a -> Eff (dom :: DOM | eff) (Unit)
+  -- inherited:
 
 

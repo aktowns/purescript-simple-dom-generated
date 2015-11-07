@@ -28,6 +28,7 @@ class MutationRecord a where
   getAttributeName :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe String)
   getAttributeNamespace :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe String)
   getOldValue :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe String)
+  -- implements:
   -- inherited:
 
 

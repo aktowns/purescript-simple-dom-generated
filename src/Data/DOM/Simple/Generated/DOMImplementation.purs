@@ -18,6 +18,7 @@ class DOMImplementation a where
   createDocument :: forall eff. a -> Maybe String -> String -> Maybe DocumentType -> Eff (dom :: DOM | eff) (XMLDocument)
   createHTMLDocument :: forall eff. a -> String -> Eff (dom :: DOM | eff) (HTMLDocument)
   hasFeature :: forall eff. a -> Eff (dom :: DOM | eff) (Boolean)
+  -- implements:
   -- inherited:
 
 

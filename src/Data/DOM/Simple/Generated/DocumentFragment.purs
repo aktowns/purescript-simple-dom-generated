@@ -11,7 +11,7 @@ import Data.DOM.Simple.Types
 
 
 class DocumentFragment a where
-  -- inherited:
+  -- implements:
   getElementById :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Maybe Element)
   getChildren :: forall eff. a -> Eff (dom :: DOM | eff) (HTMLCollection)
   getFirstElementChild :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe Element)
@@ -19,5 +19,6 @@ class DocumentFragment a where
   getChildElementCount :: forall eff. a -> Eff (dom :: DOM | eff) (Int)
   querySelector :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Maybe Element)
   querySelectorAll :: forall eff. a -> String -> Eff (dom :: DOM | eff) (NodeList)
+  -- inherited:
 
 
