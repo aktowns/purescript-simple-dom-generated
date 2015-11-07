@@ -1,0 +1,113 @@
+module Data.DOM.Simple.FreeDOM where
+
+import Prelude
+import Data.Maybe
+import Control.Monad.Eff
+import Control.Monad.Free
+import DOM
+--
+-- foreign import data Element       :: *
+-- foreign import data NodeList      :: *
+-- foreign import data HTMLWindow    :: *
+-- foreign import data HTMLElement   :: *
+--
+--
+-- foreign import querySelectorImpl :: forall eff a. String -> a -> Eff (dom :: DOM | eff) Maybe Element
+--
+-- type DOMEff eff a = Eff (dom :: DOM | ff) a
+-- type Return a e = (a -> e)
+--
+-- data FreeDOMF a next
+--   = GetElementById          String a ((Maybe Element) -> next)
+--   | GetElementsByClassName  String a ((Array Element) -> next)
+--   | GetElementsByName       String a ((Array Element) -> next)
+--   | QuerySelector           String a ((Maybe Element) -> next)
+--   | QuerySelectorAll        String a (NodeList -> next)
+--   | GetAttribute            String a (String -> next)
+--   | SetAttribute            String String a (Unit -> next)
+--   | HasAttribute            String a (Boolean -> next)
+--   | RemoveAttribute         String a (Unit -> next)
+--   | GetStyleAttr            String a (String -> next)
+--   | SetStyleAttr            String String a (Unit -> next)
+--   | Children                a ((Array HTMLElement) -> next)
+--   | AppendChild             Element a (Unit -> next)
+--   | InnerHTML               a (String -> next)
+--   | SetInnerHTML            String a (Unit -> next)
+--   | TextContent             a (String -> next)
+--   | SetTextContent          String a (Unit -> next)
+--   | Value                   a (String -> next)
+--   | SetValue                String a (Unit -> next)
+--   | ContentWindow           a (HTMLWindow -> next)
+--   | ClassRemove             String a (Unit -> next)
+--   | ClassAdd                String a (Unit -> next)
+--   | ClassToggle             String a (Unit -> next)
+--   | ClassContains           String a (Boolean -> next)
+--   | OffsetParent            a ((Maybe HTMLElement) -> next)
+--   | OffsetHeight            a (Int -> next)
+--   | OffsetWidth             a (Int -> next)
+--   | OffsetTop               a (Int -> next)
+--   | OffsetLeft              a (Int -> next)
+--
+-- instance functorFreeDOMF :: Functor FreeDOMF where
+--   map f (GetElementById tid a next)                = GetElementById tid               a (f <<< next)
+--   map f (GetElementsByClassName className a next)  = GetElementsByClassName className a (f <<< next)
+--   map f (GetElementsByName name a next)            = GetElementsByName name           a (f <<< next)
+--   map f (QuerySelector sel a next)                 = QuerySelector sel                a (f <<< next)
+--   map f (QuerySelectorAll sel a next)              = QuerySelectorAll sel             a (f <<< next)
+--   map f (GetAttribute attr a next)                 = GetAttribute attr                a (f <<< next)
+--   map f (SetAttribute attr val a next)             = SetAttribute attr val            a (f <<< next)
+--   map f (HasAttribute attr a next)                 = HasAttribute attr                a (f <<< next)
+--   map f (RemoveAttribute attr a next)              = RemoveAttribute attr             a (f <<< next)
+--   map f (GetStyleAttr style a next)                = GetStyleAttr style               a (f <<< next)
+--   map f (SetStyleAttr style val a next)            = SetStyleAttr style val           a (f <<< next)
+--   map f (Children a next)                          = Children                         a (f <<< next)
+--   map f (AppendChild el a next)                    = AppendChild el                   a (f <<< next)
+--   map f (InnerHTML a next)                         = InnerHTML                        a (f <<< next)
+--   map f (SetInnerHTML val a next)                  = SetInnerHTML val                 a (f <<< next)
+--   map f (TextContent a next)                       = TextContent                      a (f <<< next)
+--   map f (SetTextContent val a next)                = SetTextContent val               a (f <<< next)
+--   map f (Value a next)                             = Value                            a (f <<< next)
+--   map f (SetValue val a next)                      = SetValue val                     a (f <<< next)
+--   map f (ContentWindow a next)                     = ContentWindow                    a (f <<< next)
+--   map f (ClassRemove klass a next)                 = ClassRemove klass                a (f <<< next)
+--   map f (ClassAdd klass a next)                    = ClassAdd klass                   a (f <<< next)
+--   map f (ClassToggle klass a next)                 = ClassToggle klass                a (f <<< next)
+--   map f (ClassContains klass a next)               = ClassContains klass              a (f <<< next)
+--   map f (OffsetParent a next)                      = OffsetParent                     a (f <<< next)
+--   map f (OffsetHeight a next)                      = OffsetHeight                     a (f <<< next)
+--   map f (OffsetWidth a next)                       = OffsetWidth                      a (f <<< next)
+--   map f (OffsetTop a next)                         = OffsetTop                        a (f <<< next)
+--   map f (OffsetLeft a next)                        = OffsetLeft                       a (f <<< next)
+--
+-- -- data FreeDOMF a next
+-- --   = QuerySelector String (Element -> next)
+-- --   | SetInnerHTML String Element next
+-- --
+-- -- instance functorFreeDOMF :: Functor FreeDOMF where
+-- --   map f (QuerySelector selector k)  = QuerySelector selector (f <<< k)
+-- --   map f (SetInnerHTML s el next)     = SetInnerHTML s el (f next)
+--
+-- type FreeDOM = Free FreeDOMF
+--
+-- freeDOMInterpreter :: forall eff a. FreeDOMF a -> Eff (dom :: DOM | eff) a
+-- freeDOMInterpreter (QuerySelector sel el next) = do
+--   element <- querySelectorImpl sel el
+--   return $ next element
+--
+-- runDOM :: forall eff a. FreeDOM a
+--        -> Eff (dom :: DOM | eff) a
+-- runDOM fdom = runFreeM freeDOMInterpreter fdom
+--
+-- querySelector :: String
+--               -> FreeDOM Element
+-- querySelector s = liftF $ QuerySelector s id
+--
+-- setValue :: String
+--          -> Element
+--          -> FreeDOM Unit
+-- setValue v el = liftF $ (SetInnerHTML v el) unit
+--
+-- testFreeDOM :: FreeDOM Unit
+-- testFreeDOM =  do
+--   sel <- querySelector "#test"
+--   setValue "woo" sel
