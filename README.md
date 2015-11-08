@@ -168,3 +168,7 @@ WIP
 [Window](docs/Data/DOM/Simple/Generated/Window.md)   
 [WindowTimers](docs/Data/DOM/Simple/Generated/WindowTimers.md)   
 [XMLDocument](docs/Data/DOM/Simple/Generated/XMLDocument.md)   
+[XMLHttpRequestEventTarget](docs/Data/DOM/Simple/Generated/XMLHttpRequestEventTarget.md)   
+[XMLHttpRequest](docs/Data/DOM/Simple/Generated/XMLHttpRequest.md)   
+[XMLHttpRequestProgressEvent](docs/Data/DOM/Simple/Generated/XMLHttpRequestProgressEvent.md)   
+[XMLHttpRequestUpload](docs/Data/DOM/Simple/Generated/XMLHttpRequestUpload.md)   

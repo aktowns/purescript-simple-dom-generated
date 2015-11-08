@@ -1272,4 +1272,34 @@ data WindowTimers :: *
 data XMLDocument :: *
 ```
 
+#### `XMLHttpRequest`
+
+``` purescript
+data XMLHttpRequest :: *
+```
+
+#### `XMLHttpRequestEventTarget`
+
+``` purescript
+data XMLHttpRequestEventTarget :: *
+```
+
+#### `XMLHttpRequestProgressEvent`
+
+``` purescript
+data XMLHttpRequestProgressEvent :: *
+```
+
+#### `XMLHttpRequestResponseType`
+
+``` purescript
+data XMLHttpRequestResponseType :: *
+```
+
+#### `XMLHttpRequestUpload`
+
+``` purescript
+data XMLHttpRequestUpload :: *
+```
+
 

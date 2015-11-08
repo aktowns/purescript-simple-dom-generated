@@ -212,3 +212,8 @@ foreign import data WindowBase64                    :: *
 foreign import data WindowEventHandlers             :: *
 foreign import data WindowTimers                    :: *
 foreign import data XMLDocument                     :: *
+foreign import data XMLHttpRequest                  :: *
+foreign import data XMLHttpRequestEventTarget       :: *
+foreign import data XMLHttpRequestProgressEvent     :: *
+foreign import data XMLHttpRequestResponseType      :: *
+foreign import data XMLHttpRequestUpload            :: *
