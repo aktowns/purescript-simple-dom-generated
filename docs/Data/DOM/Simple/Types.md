@@ -540,4 +540,172 @@ data CharacterData :: *
 data ArrayBufferView :: *
 ```
 
+#### `WindowTimers`
+
+``` purescript
+data WindowTimers :: *
+```
+
+#### `WindowEventHandlers`
+
+``` purescript
+data WindowEventHandlers :: *
+```
+
+#### `WindowBase64`
+
+``` purescript
+data WindowBase64 :: *
+```
+
+#### `History`
+
+``` purescript
+data History :: *
+```
+
+#### `MutationObserverConstructor`
+
+``` purescript
+data MutationObserverConstructor :: *
+```
+
+#### `URLConstructor`
+
+``` purescript
+data URLConstructor :: *
+```
+
+#### `AnimationEventConstructor`
+
+``` purescript
+data AnimationEventConstructor :: *
+```
+
+#### `TransitionEventConstructor`
+
+``` purescript
+data TransitionEventConstructor :: *
+```
+
+#### `FrameRequestCallback`
+
+``` purescript
+data FrameRequestCallback :: *
+```
+
+#### `CSSRuleList`
+
+``` purescript
+data CSSRuleList :: *
+```
+
+#### `StyleMedia`
+
+``` purescript
+data StyleMedia :: *
+```
+
+#### `Navigator`
+
+``` purescript
+data Navigator :: *
+```
+
+#### `Console`
+
+``` purescript
+data Console :: *
+```
+
+#### `Screen`
+
+``` purescript
+data Screen :: *
+```
+
+#### `MediaQueryList`
+
+``` purescript
+data MediaQueryList :: *
+```
+
+#### `CSSStyleDeclaration`
+
+``` purescript
+data CSSStyleDeclaration :: *
+```
+
+#### `IdleRequestCallback`
+
+``` purescript
+data IdleRequestCallback :: *
+```
+
+#### `ApplicationCache`
+
+``` purescript
+data ApplicationCache :: *
+```
+
+#### `BarProp`
+
+``` purescript
+data BarProp :: *
+```
+
+#### `NavigatorStorageUtils`
+
+``` purescript
+data NavigatorStorageUtils :: *
+```
+
+#### `NavigatorOnLine`
+
+``` purescript
+data NavigatorOnLine :: *
+```
+
+#### `NavigatorLanguage`
+
+``` purescript
+data NavigatorLanguage :: *
+```
+
+#### `NavigatorID`
+
+``` purescript
+data NavigatorID :: *
+```
+
+#### `NavigatorCPU`
+
+``` purescript
+data NavigatorCPU :: *
+```
+
+#### `ImageBitmap`
+
+``` purescript
+data ImageBitmap :: *
+```
+
+#### `SerializedScriptValue`
+
+``` purescript
+data SerializedScriptValue :: *
+```
+
+#### `ScrollRestoration`
+
+``` purescript
+data ScrollRestoration :: *
+```
+
+#### `ConsoleBase`
+
+``` purescript
+data ConsoleBase :: *
+```
+
 
