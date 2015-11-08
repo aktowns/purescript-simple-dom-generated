@@ -27,3 +27,12 @@ class DOMTokenList a where
   -- inherited:
 
 
+instance domtokenlist :: DOMTokenList DOMTokenList where
+  getLength = getLengthImpl
+  item = itemImpl
+  contains = containsImpl
+  add = addImpl
+  remove = removeImpl
+  toggle = toggleImpl
+
+

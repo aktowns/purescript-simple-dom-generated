@@ -342,4 +342,202 @@ data CustomElementConstructor :: *
 data ScrollToOptions :: *
 ```
 
+#### `Uint16Array`
+
+``` purescript
+data Uint16Array :: *
+```
+
+#### `Uint8Array`
+
+``` purescript
+data Uint8Array :: *
+```
+
+#### `Uint32Array`
+
+``` purescript
+data Uint32Array :: *
+```
+
+#### `Uint8ClampedArray`
+
+``` purescript
+data Uint8ClampedArray :: *
+```
+
+#### `URLUtilsReadOnly`
+
+``` purescript
+data URLUtilsReadOnly :: *
+```
+
+#### `URLUtils`
+
+``` purescript
+data URLUtils :: *
+```
+
+#### `URL`
+
+``` purescript
+data URL :: *
+```
+
+#### `SharedArrayBuffer`
+
+``` purescript
+data SharedArrayBuffer :: *
+```
+
+#### `NonDocumentTypeChildNode`
+
+``` purescript
+data NonDocumentTypeChildNode :: *
+```
+
+#### `NonElementParentNode`
+
+``` purescript
+data NonElementParentNode :: *
+```
+
+#### `ParentNode`
+
+``` purescript
+data ParentNode :: *
+```
+
+#### `Iterator`
+
+``` purescript
+data Iterator :: *
+```
+
+#### `MessageChannel`
+
+``` purescript
+data MessageChannel :: *
+```
+
+#### `Int32Array`
+
+``` purescript
+data Int32Array :: *
+```
+
+#### `Int16Array`
+
+``` purescript
+data Int16Array :: *
+```
+
+#### `IdleDeadline`
+
+``` purescript
+data IdleDeadline :: *
+```
+
+#### `GlobalEventHandlers`
+
+``` purescript
+data GlobalEventHandlers :: *
+```
+
+#### `Int8Array`
+
+``` purescript
+data Int8Array :: *
+```
+
+#### `MutationObserver`
+
+``` purescript
+data MutationObserver :: *
+```
+
+#### `DataView`
+
+``` purescript
+data DataView :: *
+```
+
+#### `DOMStringMap`
+
+``` purescript
+data DOMStringMap :: *
+```
+
+#### `DOMStringList`
+
+``` purescript
+data DOMStringList :: *
+```
+
+#### `DOMSettableTokenList`
+
+``` purescript
+data DOMSettableTokenList :: *
+```
+
+#### `DOMRectReadOnly`
+
+``` purescript
+data DOMRectReadOnly :: *
+```
+
+#### `DOMRect`
+
+``` purescript
+data DOMRect :: *
+```
+
+#### `DOMPointReadOnly`
+
+``` purescript
+data DOMPointReadOnly :: *
+```
+
+#### `DOMPoint`
+
+``` purescript
+data DOMPoint :: *
+```
+
+#### `DOMMatrixReadOnly`
+
+``` purescript
+data DOMMatrixReadOnly :: *
+```
+
+#### `DOMError`
+
+``` purescript
+data DOMError :: *
+```
+
+#### `CompositorProxy`
+
+``` purescript
+data CompositorProxy :: *
+```
+
+#### `ChildNode`
+
+``` purescript
+data ChildNode :: *
+```
+
+#### `CharacterData`
+
+``` purescript
+data CharacterData :: *
+```
+
+#### `ArrayBufferView`
+
+``` purescript
+data ArrayBufferView :: *
+```
+
 

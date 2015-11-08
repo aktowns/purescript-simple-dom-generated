@@ -76,4 +76,9 @@ class URLUtilsReadOnly a where
   getHash :: forall eff. a -> Eff (dom :: DOM | eff) USVString
 ```
 
+##### Instances
+``` purescript
+instance urlutilsreadonly :: URLUtilsReadOnly URLUtilsReadOnly
+```
+
 

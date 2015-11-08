@@ -20,4 +20,9 @@ class DOMSettableTokenList a where
   setValue :: forall eff. String -> Eff (dom :: DOM | eff) Unit
 ```
 
+##### Instances
+``` purescript
+instance domsettabletokenlist :: DOMSettableTokenList DOMSettableTokenList
+```
+
 

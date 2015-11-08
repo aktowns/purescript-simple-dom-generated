@@ -20,3 +20,9 @@ class MutationObserver a where
   -- inherited:
 
 
+instance mutationobserver :: MutationObserver MutationObserver where
+  observe = observeImpl
+  disconnect = disconnectImpl
+  takeRecords = takeRecordsImpl
+
+

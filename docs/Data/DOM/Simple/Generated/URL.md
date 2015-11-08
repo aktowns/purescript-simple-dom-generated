@@ -12,6 +12,138 @@ createObjectURLImpl :: forall eff a. a -> Maybe Blob -> Eff (dom :: DOM | eff) (
 revokeObjectURLImpl :: forall eff a. a -> String -> Eff (dom :: DOM | eff) Unit
 ```
 
+#### `getHrefImpl`
+
+``` purescript
+getHrefImpl :: forall eff a. a -> Eff (dom :: DOM | eff) USVString
+```
+
+#### `setHrefImpl`
+
+``` purescript
+setHrefImpl :: forall eff a. USVString -> Eff (dom :: DOM | eff) Unit
+```
+
+#### `toStringImpl`
+
+``` purescript
+toStringImpl :: forall eff a. a -> Eff (dom :: DOM | eff) USVString
+```
+
+#### `getOriginImpl`
+
+``` purescript
+getOriginImpl :: forall eff a. a -> Eff (dom :: DOM | eff) USVString
+```
+
+#### `getProtocolImpl`
+
+``` purescript
+getProtocolImpl :: forall eff a. a -> Eff (dom :: DOM | eff) USVString
+```
+
+#### `setProtocolImpl`
+
+``` purescript
+setProtocolImpl :: forall eff a. USVString -> Eff (dom :: DOM | eff) Unit
+```
+
+#### `getUsernameImpl`
+
+``` purescript
+getUsernameImpl :: forall eff a. a -> Eff (dom :: DOM | eff) USVString
+```
+
+#### `setUsernameImpl`
+
+``` purescript
+setUsernameImpl :: forall eff a. USVString -> Eff (dom :: DOM | eff) Unit
+```
+
+#### `getPasswordImpl`
+
+``` purescript
+getPasswordImpl :: forall eff a. a -> Eff (dom :: DOM | eff) USVString
+```
+
+#### `setPasswordImpl`
+
+``` purescript
+setPasswordImpl :: forall eff a. USVString -> Eff (dom :: DOM | eff) Unit
+```
+
+#### `getHostImpl`
+
+``` purescript
+getHostImpl :: forall eff a. a -> Eff (dom :: DOM | eff) USVString
+```
+
+#### `setHostImpl`
+
+``` purescript
+setHostImpl :: forall eff a. USVString -> Eff (dom :: DOM | eff) Unit
+```
+
+#### `getHostnameImpl`
+
+``` purescript
+getHostnameImpl :: forall eff a. a -> Eff (dom :: DOM | eff) USVString
+```
+
+#### `setHostnameImpl`
+
+``` purescript
+setHostnameImpl :: forall eff a. USVString -> Eff (dom :: DOM | eff) Unit
+```
+
+#### `getPortImpl`
+
+``` purescript
+getPortImpl :: forall eff a. a -> Eff (dom :: DOM | eff) USVString
+```
+
+#### `setPortImpl`
+
+``` purescript
+setPortImpl :: forall eff a. USVString -> Eff (dom :: DOM | eff) Unit
+```
+
+#### `getPathnameImpl`
+
+``` purescript
+getPathnameImpl :: forall eff a. a -> Eff (dom :: DOM | eff) USVString
+```
+
+#### `setPathnameImpl`
+
+``` purescript
+setPathnameImpl :: forall eff a. USVString -> Eff (dom :: DOM | eff) Unit
+```
+
+#### `getSearchImpl`
+
+``` purescript
+getSearchImpl :: forall eff a. a -> Eff (dom :: DOM | eff) USVString
+```
+
+#### `setSearchImpl`
+
+``` purescript
+setSearchImpl :: forall eff a. USVString -> Eff (dom :: DOM | eff) Unit
+```
+
+#### `getHashImpl`
+
+``` purescript
+getHashImpl :: forall eff a. a -> Eff (dom :: DOM | eff) USVString
+```
+
+#### `setHashImpl`
+
+``` purescript
+setHashImpl :: forall eff a. USVString -> Eff (dom :: DOM | eff) Unit
+```
+
 #### `URL`
 
 ``` purescript
@@ -40,6 +172,11 @@ class URL a where
   setSearch :: forall eff. USVString -> Eff (dom :: DOM | eff) Unit
   getHash :: forall eff. a -> Eff (dom :: DOM | eff) USVString
   setHash :: forall eff. USVString -> Eff (dom :: DOM | eff) Unit
+```
+
+##### Instances
+``` purescript
+instance url :: URL URL
 ```
 
 

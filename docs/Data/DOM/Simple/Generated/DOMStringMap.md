@@ -6,4 +6,9 @@
 class DOMStringMap a
 ```
 
+##### Instances
+``` purescript
+instance domstringmap :: DOMStringMap DOMStringMap
+```
+
 

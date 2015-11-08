@@ -13,4 +13,9 @@ class ChildNode a where
   remove :: forall eff. a -> Eff (dom :: DOM | eff) Unit
 ```
 
+##### Instances
+``` purescript
+instance childnode :: ChildNode ChildNode
+```
+
 

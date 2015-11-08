@@ -62,4 +62,9 @@ class DOMRectReadOnly a where
   getLeft :: forall eff. a -> Eff (dom :: DOM | eff) Int
 ```
 
+##### Instances
+``` purescript
+instance domrectreadonly :: DOMRectReadOnly DOMRectReadOnly
+```
+
 

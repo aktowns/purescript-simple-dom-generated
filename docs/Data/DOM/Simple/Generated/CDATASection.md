@@ -6,4 +6,9 @@
 class CDATASection a
 ```
 
+##### Instances
+``` purescript
+instance cdatasection :: CDATASection CDATASection
+```
+
 

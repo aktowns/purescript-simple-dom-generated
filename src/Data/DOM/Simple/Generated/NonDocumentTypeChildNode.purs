@@ -18,3 +18,8 @@ class NonDocumentTypeChildNode a where
   -- inherited:
 
 
+instance nondocumenttypechildnode :: NonDocumentTypeChildNode NonDocumentTypeChildNode where
+  getPreviousElementSibling = getPreviousElementSiblingImpl
+  getNextElementSibling = getNextElementSiblingImpl
+
+

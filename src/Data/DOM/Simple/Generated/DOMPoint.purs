@@ -30,3 +30,14 @@ class DOMPoint a where
   -- inherited:
 
 
+instance dompoint :: DOMPoint DOMPoint where
+  getX = getXImpl
+  setX = setXImpl
+  getY = getYImpl
+  setY = setYImpl
+  getZ = getZImpl
+  setZ = setZImpl
+  getW = getWImpl
+  setW = setWImpl
+
+

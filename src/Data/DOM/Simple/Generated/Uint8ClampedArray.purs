@@ -15,3 +15,6 @@ class Uint8ClampedArray a where
   -- inherited:
 
 
+instance uint8clampedarray :: Uint8ClampedArray Uint8ClampedArray where
+
+

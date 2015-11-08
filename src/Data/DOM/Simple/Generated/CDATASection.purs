@@ -15,3 +15,6 @@ class CDATASection a where
   -- inherited:
 
 
+instance cdatasection :: CDATASection CDATASection where
+
+

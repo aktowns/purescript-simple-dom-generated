@@ -34,4 +34,9 @@ class DOMImplementation a where
   hasFeature :: forall eff. a -> Eff (dom :: DOM | eff) Boolean
 ```
 
+##### Instances
+``` purescript
+instance domimplementation :: DOMImplementation DOMImplementation
+```
+
 

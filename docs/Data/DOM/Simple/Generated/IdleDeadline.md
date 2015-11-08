@@ -20,4 +20,9 @@ class IdleDeadline a where
   getDidTimeout :: forall eff. a -> Eff (dom :: DOM | eff) Boolean
 ```
 
+##### Instances
+``` purescript
+instance idledeadline :: IdleDeadline IdleDeadline
+```
+
 

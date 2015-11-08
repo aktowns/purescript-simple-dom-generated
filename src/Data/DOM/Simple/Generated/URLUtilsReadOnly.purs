@@ -34,3 +34,16 @@ class URLUtilsReadOnly a where
   -- inherited:
 
 
+instance urlutilsreadonly :: URLUtilsReadOnly URLUtilsReadOnly where
+  getHref = getHrefImpl
+  toString = toStringImpl
+  getOrigin = getOriginImpl
+  getProtocol = getProtocolImpl
+  getHost = getHostImpl
+  getHostname = getHostnameImpl
+  getPort = getPortImpl
+  getPathname = getPathnameImpl
+  getSearch = getSearchImpl
+  getHash = getHashImpl
+
+

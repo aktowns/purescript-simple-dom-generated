@@ -31,3 +31,14 @@ class NamedNodeMap a where
   -- inherited:
 
 
+instance namednodemap :: NamedNodeMap NamedNodeMap where
+  getLength = getLengthImpl
+  item = itemImpl
+  getNamedItem = getNamedItemImpl
+  getNamedItemNS = getNamedItemNSImpl
+  setNamedItem = setNamedItemImpl
+  setNamedItemNS = setNamedItemNSImpl
+  removeNamedItem = removeNamedItemImpl
+  removeNamedItemNS = removeNamedItemNSImpl
+
+

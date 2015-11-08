@@ -32,3 +32,7 @@ class NodeFilter a where
   -- inherited:
 
 
+instance nodefilter :: NodeFilter NodeFilter where
+  acceptNode = acceptNodeImpl
+
+

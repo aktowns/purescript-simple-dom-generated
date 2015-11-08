@@ -6,4 +6,9 @@
 class Float64Array a
 ```
 
+##### Instances
+``` purescript
+instance float64array :: Float64Array Float64Array
+```
+
 

@@ -18,6 +18,24 @@ getWholeTextImpl :: forall eff a. a -> Eff (dom :: DOM | eff) String
 getDestinationInsertionPointsImpl :: forall eff a. a -> Eff (dom :: DOM | eff) NodeList
 ```
 
+#### `getPreviousElementSiblingImpl`
+
+``` purescript
+getPreviousElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Element
+```
+
+#### `getNextElementSiblingImpl`
+
+``` purescript
+getNextElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Element
+```
+
+#### `removeImpl`
+
+``` purescript
+removeImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Unit
+```
+
 #### `Text`
 
 ``` purescript
@@ -28,6 +46,11 @@ class Text a where
   getPreviousElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) Element
   getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) Element
   remove :: forall eff. a -> Eff (dom :: DOM | eff) Unit
+```
+
+##### Instances
+``` purescript
+instance text :: Text Text
 ```
 
 

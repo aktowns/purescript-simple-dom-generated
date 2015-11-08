@@ -972,4 +972,9 @@ class GlobalEventHandlers a where
   setOnwaiting :: forall eff. EventHandler -> Eff (dom :: DOM | eff) Unit
 ```
 
+##### Instances
+``` purescript
+instance globaleventhandlers :: GlobalEventHandlers GlobalEventHandlers
+```
+
 

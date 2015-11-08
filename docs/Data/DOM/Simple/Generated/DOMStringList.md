@@ -27,4 +27,9 @@ class DOMStringList a where
   contains :: forall eff. a -> String -> Eff (dom :: DOM | eff) Boolean
 ```
 
+##### Instances
+``` purescript
+instance domstringlist :: DOMStringList DOMStringList
+```
+
 

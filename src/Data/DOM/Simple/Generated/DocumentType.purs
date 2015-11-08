@@ -11,6 +11,7 @@ import Data.DOM.Simple.Types
 foreign import getNameImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (String)
 foreign import getPublicIdImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (String)
 foreign import getSystemIdImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (String)
+foreign import removeImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Unit)
 
 class DocumentType a where
   getName :: forall eff. a -> Eff (dom :: DOM | eff) (String)
@@ -19,5 +20,12 @@ class DocumentType a where
   -- implements:
   remove :: forall eff. a -> Eff (dom :: DOM | eff) (Unit)
   -- inherited:
+
+
+instance documenttype :: DocumentType DocumentType where
+  getName = getNameImpl
+  getPublicId = getPublicIdImpl
+  getSystemId = getSystemIdImpl
+  remove = removeImpl
 
 

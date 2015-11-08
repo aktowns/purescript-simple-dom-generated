@@ -356,4 +356,9 @@ class DOMMatrix a where
   scaleNonUniformSelf :: forall eff. a -> Int -> Int -> Int -> Int -> Int -> Int -> Eff (dom :: DOM | eff) DOMMatrix
 ```
 
+##### Instances
+``` purescript
+instance dommatrix :: DOMMatrix DOMMatrix
+```
+
 

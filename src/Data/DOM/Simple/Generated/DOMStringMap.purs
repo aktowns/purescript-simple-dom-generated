@@ -16,3 +16,6 @@ class DOMStringMap a where
   -- inherited:
 
 
+instance domstringmap :: DOMStringMap DOMStringMap where
+
+

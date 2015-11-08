@@ -32,3 +32,15 @@ class MutationRecord a where
   -- inherited:
 
 
+instance mutationrecord :: MutationRecord MutationRecord where
+  getType = getTypeImpl
+  getTarget = getTargetImpl
+  getAddedNodes = getAddedNodesImpl
+  getRemovedNodes = getRemovedNodesImpl
+  getPreviousSibling = getPreviousSiblingImpl
+  getNextSibling = getNextSiblingImpl
+  getAttributeName = getAttributeNameImpl
+  getAttributeNamespace = getAttributeNamespaceImpl
+  getOldValue = getOldValueImpl
+
+

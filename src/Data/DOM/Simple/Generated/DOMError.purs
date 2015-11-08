@@ -18,3 +18,8 @@ class DOMError a where
   -- inherited:
 
 
+instance domerror :: DOMError DOMError where
+  getName = getNameImpl
+  getMessage = getMessageImpl
+
+

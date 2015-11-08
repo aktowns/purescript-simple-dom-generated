@@ -62,4 +62,9 @@ class NodeIterator a where
   detach :: forall eff. a -> Eff (dom :: DOM | eff) Unit
 ```
 
+##### Instances
+``` purescript
+instance nodeiterator :: NodeIterator NodeIterator
+```
+
 

@@ -15,3 +15,6 @@ class Float64Array a where
   -- inherited:
 
 
+instance float64array :: Float64Array Float64Array where
+
+

@@ -18,3 +18,8 @@ class IdleDeadline a where
   -- inherited:
 
 
+instance idledeadline :: IdleDeadline IdleDeadline where
+  timeRemaining = timeRemainingImpl
+  getDidTimeout = getDidTimeoutImpl
+
+

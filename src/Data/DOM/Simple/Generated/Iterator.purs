@@ -16,3 +16,7 @@ class Iterator a where
   -- inherited:
 
 
+instance iterator :: Iterator Iterator where
+  next = nextImpl
+
+

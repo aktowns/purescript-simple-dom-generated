@@ -8,7 +8,9 @@ import Control.Monad.Eff
 import DOM
 import Data.DOM.Simple.Types
 
-
+foreign import getPreviousElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Element)
+foreign import getNextElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Element)
+foreign import removeImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Unit)
 
 class Comment a where
   -- implements:
@@ -16,5 +18,11 @@ class Comment a where
   getPreviousElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
   getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
   remove :: forall eff. a -> Eff (dom :: DOM | eff) (Unit)
+
+
+instance comment :: Comment Comment where
+  getPreviousElementSibling = getPreviousElementSiblingImpl
+  getNextElementSibling = getNextElementSiblingImpl
+  remove = removeImpl
 
 

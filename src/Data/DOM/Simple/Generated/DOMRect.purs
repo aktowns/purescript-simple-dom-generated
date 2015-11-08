@@ -30,3 +30,14 @@ class DOMRect a where
   -- inherited:
 
 
+instance domrect :: DOMRect DOMRect where
+  getX = getXImpl
+  setX = setXImpl
+  getY = getYImpl
+  setY = setYImpl
+  getWidth = getWidthImpl
+  setWidth = setWidthImpl
+  getHeight = getHeightImpl
+  setHeight = setHeightImpl
+
+

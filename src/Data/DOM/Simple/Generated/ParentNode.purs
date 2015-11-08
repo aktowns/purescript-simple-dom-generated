@@ -26,3 +26,12 @@ class ParentNode a where
   -- inherited:
 
 
+instance parentnode :: ParentNode ParentNode where
+  getChildren = getChildrenImpl
+  getFirstElementChild = getFirstElementChildImpl
+  getLastElementChild = getLastElementChildImpl
+  getChildElementCount = getChildElementCountImpl
+  querySelector = querySelectorImpl
+  querySelectorAll = querySelectorAllImpl
+
+

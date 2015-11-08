@@ -96,6 +96,15 @@ foreign import getOntouchstartImpl :: forall eff a. a -> Eff (dom :: DOM | eff) 
 foreign import setOntouchstartImpl :: forall eff a. EventHandler -> Eff (dom :: DOM | eff) (Unit)
 foreign import getOnwheelImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (EventHandler)
 foreign import setOnwheelImpl :: forall eff a. EventHandler -> Eff (dom :: DOM | eff) (Unit)
+foreign import getPreviousElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Element)
+foreign import getNextElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Element)
+foreign import removeImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Unit)
+foreign import getChildrenImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (HTMLCollection)
+foreign import getFirstElementChildImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Maybe Element)
+foreign import getLastElementChildImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Maybe Element)
+foreign import getChildElementCountImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Int)
+foreign import querySelectorImpl :: forall eff a. a -> String -> Eff (dom :: DOM | eff) (Maybe Element)
+foreign import querySelectorAllImpl :: forall eff a. a -> String -> Eff (dom :: DOM | eff) (NodeList)
 
 class Element a where
   getNamespaceURI :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe String)
@@ -197,5 +206,105 @@ class Element a where
   querySelector :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Maybe Element)
   querySelectorAll :: forall eff. a -> String -> Eff (dom :: DOM | eff) (NodeList)
   -- inherited:
+
+
+instance element :: Element Element where
+  getNamespaceURI = getNamespaceURIImpl
+  getPrefix = getPrefixImpl
+  getLocalName = getLocalNameImpl
+  getTagName = getTagNameImpl
+  getId = getIdImpl
+  setId = setIdImpl
+  getClassName = getClassNameImpl
+  setClassName = setClassNameImpl
+  getClassList = getClassListImpl
+  hasAttributes = hasAttributesImpl
+  getAttributes = getAttributesImpl
+  getAttribute = getAttributeImpl
+  getAttributeNS = getAttributeNSImpl
+  setAttribute = setAttributeImpl
+  setAttributeNS = setAttributeNSImpl
+  removeAttribute = removeAttributeImpl
+  removeAttributeNS = removeAttributeNSImpl
+  hasAttribute = hasAttributeImpl
+  hasAttributeNS = hasAttributeNSImpl
+  getAttributeNode = getAttributeNodeImpl
+  getAttributeNodeNS = getAttributeNodeNSImpl
+  setAttributeNode = setAttributeNodeImpl
+  setAttributeNodeNS = setAttributeNodeNSImpl
+  removeAttributeNode = removeAttributeNodeImpl
+  closest = closestImpl
+  matches = matchesImpl
+  getElementsByTagName = getElementsByTagNameImpl
+  getElementsByTagNameNS = getElementsByTagNameNSImpl
+  getElementsByClassName = getElementsByClassNameImpl
+  getInnerHTML = getInnerHTMLImpl
+  setInnerHTML = setInnerHTMLImpl
+  getOuterHTML = getOuterHTMLImpl
+  setOuterHTML = setOuterHTMLImpl
+  insertAdjacentHTML = insertAdjacentHTMLImpl
+  createShadowRoot = createShadowRootImpl
+  getDestinationInsertionPoints = getDestinationInsertionPointsImpl
+  getShadowRoot = getShadowRootImpl
+  requestPointerLock = requestPointerLockImpl
+  getClientRects = getClientRectsImpl
+  getBoundingClientRect = getBoundingClientRectImpl
+  scrollIntoView = scrollIntoViewImpl
+  scroll = scrollImpl
+  scrollTo = scrollToImpl
+  scrollBy = scrollByImpl
+  getScrollTop = getScrollTopImpl
+  setScrollTop = setScrollTopImpl
+  getScrollLeft = getScrollLeftImpl
+  setScrollLeft = setScrollLeftImpl
+  getScrollWidth = getScrollWidthImpl
+  getScrollHeight = getScrollHeightImpl
+  getClientTop = getClientTopImpl
+  getClientLeft = getClientLeftImpl
+  getClientWidth = getClientWidthImpl
+  getClientHeight = getClientHeightImpl
+  setApplyScroll = setApplyScrollImpl
+  setDistributeScroll = setDistributeScrollImpl
+  insertAdjacentElement = insertAdjacentElementImpl
+  insertAdjacentText = insertAdjacentTextImpl
+  scrollIntoViewIfNeeded = scrollIntoViewIfNeededImpl
+  webkitMatchesSelector = webkitMatchesSelectorImpl
+  getComputedRole = getComputedRoleImpl
+  getComputedName = getComputedNameImpl
+  getOnbeforecopy = getOnbeforecopyImpl
+  setOnbeforecopy = setOnbeforecopyImpl
+  getOnbeforecut = getOnbeforecutImpl
+  setOnbeforecut = setOnbeforecutImpl
+  getOnbeforepaste = getOnbeforepasteImpl
+  setOnbeforepaste = setOnbeforepasteImpl
+  getOncopy = getOncopyImpl
+  setOncopy = setOncopyImpl
+  getOncut = getOncutImpl
+  setOncut = setOncutImpl
+  getOnpaste = getOnpasteImpl
+  setOnpaste = setOnpasteImpl
+  getOnsearch = getOnsearchImpl
+  setOnsearch = setOnsearchImpl
+  getOnselectstart = getOnselectstartImpl
+  setOnselectstart = setOnselectstartImpl
+  getOntouchcancel = getOntouchcancelImpl
+  setOntouchcancel = setOntouchcancelImpl
+  getOntouchend = getOntouchendImpl
+  setOntouchend = setOntouchendImpl
+  getOntouchmove = getOntouchmoveImpl
+  setOntouchmove = setOntouchmoveImpl
+  getOntouchstart = getOntouchstartImpl
+  setOntouchstart = setOntouchstartImpl
+  getOnwheel = getOnwheelImpl
+  setOnwheel = setOnwheelImpl
+  getPreviousElementSibling = getPreviousElementSiblingImpl
+  getNextElementSibling = getNextElementSiblingImpl
+  remove = removeImpl
+  getChildren = getChildrenImpl
+  getFirstElementChild = getFirstElementChildImpl
+  getLastElementChild = getLastElementChildImpl
+  getChildElementCount = getChildElementCountImpl
+  querySelector = querySelectorImpl
+  querySelectorAll = querySelectorAllImpl
 
 

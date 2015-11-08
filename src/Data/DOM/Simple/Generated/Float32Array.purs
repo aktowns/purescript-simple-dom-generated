@@ -15,3 +15,6 @@ class Float32Array a where
   -- inherited:
 
 
+instance float32array :: Float32Array Float32Array where
+
+

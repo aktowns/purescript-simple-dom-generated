@@ -78,3 +78,36 @@ class Range a where
   -- inherited:
 
 
+instance range :: Range Range where
+  getStartContainer = getStartContainerImpl
+  getStartOffset = getStartOffsetImpl
+  getEndContainer = getEndContainerImpl
+  getEndOffset = getEndOffsetImpl
+  getCollapsed = getCollapsedImpl
+  getCommonAncestorContainer = getCommonAncestorContainerImpl
+  setStart = setStartImpl
+  setEnd = setEndImpl
+  setStartBefore = setStartBeforeImpl
+  setStartAfter = setStartAfterImpl
+  setEndBefore = setEndBeforeImpl
+  setEndAfter = setEndAfterImpl
+  collapse = collapseImpl
+  selectNode = selectNodeImpl
+  selectNodeContents = selectNodeContentsImpl
+  compareBoundaryPoints = compareBoundaryPointsImpl
+  deleteContents = deleteContentsImpl
+  extractContents = extractContentsImpl
+  cloneContents = cloneContentsImpl
+  insertNode = insertNodeImpl
+  surroundContents = surroundContentsImpl
+  cloneRange = cloneRangeImpl
+  detach = detachImpl
+  isPointInRange = isPointInRangeImpl
+  comparePoint = comparePointImpl
+  intersectsNode = intersectsNodeImpl
+  getClientRects = getClientRectsImpl
+  getBoundingClientRect = getBoundingClientRectImpl
+  createContextualFragment = createContextualFragmentImpl
+  expand = expandImpl
+
+

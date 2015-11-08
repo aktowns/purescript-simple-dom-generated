@@ -62,4 +62,9 @@ class NamedNodeMap a where
   removeNamedItemNS :: forall eff. a -> Maybe String -> String -> Eff (dom :: DOM | eff) Attr
 ```
 
+##### Instances
+``` purescript
+instance namednodemap :: NamedNodeMap NamedNodeMap
+```
+
 

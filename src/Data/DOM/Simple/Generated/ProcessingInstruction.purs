@@ -10,6 +10,9 @@ import Data.DOM.Simple.Types
 
 foreign import getTargetImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (String)
 foreign import getSheetImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (StyleSheet)
+foreign import getPreviousElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Element)
+foreign import getNextElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Element)
+foreign import removeImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Unit)
 
 class ProcessingInstruction a where
   getTarget :: forall eff. a -> Eff (dom :: DOM | eff) (String)
@@ -19,5 +22,13 @@ class ProcessingInstruction a where
   getPreviousElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
   getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
   remove :: forall eff. a -> Eff (dom :: DOM | eff) (Unit)
+
+
+instance processinginstruction :: ProcessingInstruction ProcessingInstruction where
+  getTarget = getTargetImpl
+  getSheet = getSheetImpl
+  getPreviousElementSibling = getPreviousElementSiblingImpl
+  getNextElementSibling = getNextElementSiblingImpl
+  remove = removeImpl
 
 

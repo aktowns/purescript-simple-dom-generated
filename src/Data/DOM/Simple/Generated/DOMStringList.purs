@@ -21,3 +21,9 @@ class DOMStringList a where
   -- inherited:
 
 
+instance domstringlist :: DOMStringList DOMStringList where
+  getLength = getLengthImpl
+  item = itemImpl
+  contains = containsImpl
+
+

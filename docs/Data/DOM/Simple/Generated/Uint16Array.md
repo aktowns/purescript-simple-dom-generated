@@ -6,4 +6,9 @@
 class Uint16Array a
 ```
 
+##### Instances
+``` purescript
+instance uint16array :: Uint16Array Uint16Array
+```
+
 

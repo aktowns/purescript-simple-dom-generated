@@ -69,4 +69,9 @@ class MutationRecord a where
   getOldValue :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe String)
 ```
 
+##### Instances
+``` purescript
+instance mutationrecord :: MutationRecord MutationRecord
+```
+
 

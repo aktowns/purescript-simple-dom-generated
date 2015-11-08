@@ -6,4 +6,9 @@
 class Int32Array a
 ```
 
+##### Instances
+``` purescript
+instance int32array :: Int32Array Int32Array
+```
+
 

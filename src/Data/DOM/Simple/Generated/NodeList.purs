@@ -18,3 +18,8 @@ class NodeList a where
   -- inherited:
 
 
+instance nodelist :: NodeList NodeList where
+  item = itemImpl
+  getLength = getLengthImpl
+
+

@@ -160,4 +160,9 @@ class URLUtils a where
   setHash :: forall eff. USVString -> Eff (dom :: DOM | eff) Unit
 ```
 
+##### Instances
+``` purescript
+instance urlutils :: URLUtils URLUtils
+```
+
 

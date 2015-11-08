@@ -20,4 +20,9 @@ class TouchList a where
   item :: forall eff. a -> Int -> Eff (dom :: DOM | eff) (Maybe Touch)
 ```
 
+##### Instances
+``` purescript
+instance touchlist :: TouchList TouchList
+```
+
 

@@ -38,3 +38,18 @@ class Attr a where
   -- inherited:
 
 
+instance attr :: Attr Attr where
+  getNamespaceURI = getNamespaceURIImpl
+  getPrefix = getPrefixImpl
+  getLocalName = getLocalNameImpl
+  getName = getNameImpl
+  getValue = getValueImpl
+  setValue = setValueImpl
+  getNodeValue = getNodeValueImpl
+  setNodeValue = setNodeValueImpl
+  getTextContent = getTextContentImpl
+  setTextContent = setTextContentImpl
+  getOwnerElement = getOwnerElementImpl
+  getSpecified = getSpecifiedImpl
+
+

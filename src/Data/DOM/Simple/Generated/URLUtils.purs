@@ -58,3 +58,28 @@ class URLUtils a where
   -- inherited:
 
 
+instance urlutils :: URLUtils URLUtils where
+  getHref = getHrefImpl
+  setHref = setHrefImpl
+  toString = toStringImpl
+  getOrigin = getOriginImpl
+  getProtocol = getProtocolImpl
+  setProtocol = setProtocolImpl
+  getUsername = getUsernameImpl
+  setUsername = setUsernameImpl
+  getPassword = getPasswordImpl
+  setPassword = setPasswordImpl
+  getHost = getHostImpl
+  setHost = setHostImpl
+  getHostname = getHostnameImpl
+  setHostname = setHostnameImpl
+  getPort = getPortImpl
+  setPort = setPortImpl
+  getPathname = getPathnameImpl
+  setPathname = setPathnameImpl
+  getSearch = getSearchImpl
+  setSearch = setSearchImpl
+  getHash = getHashImpl
+  setHash = setHashImpl
+
+

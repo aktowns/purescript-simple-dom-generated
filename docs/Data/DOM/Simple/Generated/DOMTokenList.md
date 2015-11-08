@@ -48,4 +48,9 @@ class DOMTokenList a where
   toggle :: forall eff. a -> String -> Boolean -> Eff (dom :: DOM | eff) Boolean
 ```
 
+##### Instances
+``` purescript
+instance domtokenlist :: DOMTokenList DOMTokenList
+```
+
 

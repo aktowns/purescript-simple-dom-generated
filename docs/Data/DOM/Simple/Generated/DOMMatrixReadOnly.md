@@ -223,4 +223,9 @@ class DOMMatrixReadOnly a where
   toFloat64Array :: forall eff. a -> Eff (dom :: DOM | eff) Float64Array
 ```
 
+##### Instances
+``` purescript
+instance dommatrixreadonly :: DOMMatrixReadOnly DOMMatrixReadOnly
+```
+
 

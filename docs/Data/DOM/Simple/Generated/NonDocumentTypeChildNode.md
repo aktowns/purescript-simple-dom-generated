@@ -20,4 +20,9 @@ class NonDocumentTypeChildNode a where
   getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) Element
 ```
 
+##### Instances
+``` purescript
+instance nondocumenttypechildnode :: NonDocumentTypeChildNode NonDocumentTypeChildNode
+```
+
 

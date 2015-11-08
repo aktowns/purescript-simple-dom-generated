@@ -30,3 +30,14 @@ class NodeIterator a where
   -- inherited:
 
 
+instance nodeiterator :: NodeIterator NodeIterator where
+  getRoot = getRootImpl
+  getReferenceNode = getReferenceNodeImpl
+  getPointerBeforeReferenceNode = getPointerBeforeReferenceNodeImpl
+  getWhatToShow = getWhatToShowImpl
+  getFilter = getFilterImpl
+  nextNode = nextNodeImpl
+  previousNode = previousNodeImpl
+  detach = detachImpl
+
+

@@ -6,4 +6,9 @@
 class DataView a
 ```
 
+##### Instances
+``` purescript
+instance dataview :: DataView DataView
+```
+
 

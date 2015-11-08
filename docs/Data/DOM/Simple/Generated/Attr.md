@@ -90,4 +90,9 @@ class Attr a where
   getSpecified :: forall eff. a -> Eff (dom :: DOM | eff) Boolean
 ```
 
+##### Instances
+``` purescript
+instance attr :: Attr Attr
+```
+
 

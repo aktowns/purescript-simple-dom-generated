@@ -26,3 +26,12 @@ class ClientRect a where
   -- inherited:
 
 
+instance clientrect :: ClientRect ClientRect where
+  getTop = getTopImpl
+  getRight = getRightImpl
+  getBottom = getBottomImpl
+  getLeft = getLeftImpl
+  getWidth = getWidthImpl
+  getHeight = getHeightImpl
+
+

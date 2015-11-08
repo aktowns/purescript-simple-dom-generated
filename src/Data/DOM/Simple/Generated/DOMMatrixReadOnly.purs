@@ -76,3 +76,37 @@ class DOMMatrixReadOnly a where
   -- inherited:
 
 
+instance dommatrixreadonly :: DOMMatrixReadOnly DOMMatrixReadOnly where
+  getA = getAImpl
+  getB = getBImpl
+  getC = getCImpl
+  getD = getDImpl
+  getE = getEImpl
+  getF = getFImpl
+  getM11 = getM11Impl
+  getM12 = getM12Impl
+  getM13 = getM13Impl
+  getM14 = getM14Impl
+  getM21 = getM21Impl
+  getM22 = getM22Impl
+  getM23 = getM23Impl
+  getM24 = getM24Impl
+  getM31 = getM31Impl
+  getM32 = getM32Impl
+  getM33 = getM33Impl
+  getM34 = getM34Impl
+  getM41 = getM41Impl
+  getM42 = getM42Impl
+  getM43 = getM43Impl
+  getM44 = getM44Impl
+  getIs2D = getIs2DImpl
+  getIsIdentity = getIsIdentityImpl
+  translate = translateImpl
+  scale = scaleImpl
+  scale3d = scale3dImpl
+  scaleNonUniform = scaleNonUniformImpl
+  multiply = multiplyImpl
+  toFloat32Array = toFloat32ArrayImpl
+  toFloat64Array = toFloat64ArrayImpl
+
+

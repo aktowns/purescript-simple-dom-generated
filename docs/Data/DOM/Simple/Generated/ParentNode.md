@@ -48,4 +48,9 @@ class ParentNode a where
   querySelectorAll :: forall eff. a -> String -> Eff (dom :: DOM | eff) NodeList
 ```
 
+##### Instances
+``` purescript
+instance parentnode :: ParentNode ParentNode
+```
+
 

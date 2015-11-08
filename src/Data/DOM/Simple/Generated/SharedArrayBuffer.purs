@@ -16,3 +16,7 @@ class SharedArrayBuffer a where
   -- inherited:
 
 
+instance sharedarraybuffer :: SharedArrayBuffer SharedArrayBuffer where
+  getByteLength = getByteLengthImpl
+
+

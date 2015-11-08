@@ -22,3 +22,10 @@ class DOMPointReadOnly a where
   -- inherited:
 
 
+instance dompointreadonly :: DOMPointReadOnly DOMPointReadOnly where
+  getX = getXImpl
+  getY = getYImpl
+  getZ = getZImpl
+  getW = getWImpl
+
+

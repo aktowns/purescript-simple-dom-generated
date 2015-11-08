@@ -20,3 +20,9 @@ class ArrayBufferView a where
   -- inherited:
 
 
+instance arraybufferview :: ArrayBufferView ArrayBufferView where
+  getBuffer = getBufferImpl
+  getByteOffset = getByteOffsetImpl
+  getByteLength = getByteLengthImpl
+
+

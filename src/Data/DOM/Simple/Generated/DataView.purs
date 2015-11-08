@@ -15,3 +15,6 @@ class DataView a where
   -- inherited:
 
 
+instance dataview :: DataView DataView where
+
+

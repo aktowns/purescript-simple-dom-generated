@@ -16,3 +16,7 @@ class ArrayBuffer a where
   -- inherited:
 
 
+instance arraybuffer :: ArrayBuffer ArrayBuffer where
+  getByteLength = getByteLengthImpl
+
+

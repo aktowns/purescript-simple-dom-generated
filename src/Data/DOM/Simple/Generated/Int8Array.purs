@@ -15,3 +15,6 @@ class Int8Array a where
   -- inherited:
 
 
+instance int8array :: Int8Array Int8Array where
+
+

@@ -22,3 +22,10 @@ class DOMImplementation a where
   -- inherited:
 
 
+instance domimplementation :: DOMImplementation DOMImplementation where
+  createDocumentType = createDocumentTypeImpl
+  createDocument = createDocumentImpl
+  createHTMLDocument = createHTMLDocumentImpl
+  hasFeature = hasFeatureImpl
+
+

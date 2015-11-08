@@ -34,3 +34,16 @@ class CompositorProxy a where
   -- inherited:
 
 
+instance compositorproxy :: CompositorProxy CompositorProxy where
+  getOpacity = getOpacityImpl
+  setOpacity = setOpacityImpl
+  getScrollLeft = getScrollLeftImpl
+  setScrollLeft = setScrollLeftImpl
+  getScrollTop = getScrollTopImpl
+  setScrollTop = setScrollTopImpl
+  getTransform = getTransformImpl
+  setTransform = setTransformImpl
+  supports = supportsImpl
+  disconnect = disconnectImpl
+
+

@@ -48,4 +48,9 @@ class ClientRect a where
   getHeight :: forall eff. a -> Eff (dom :: DOM | eff) Int
 ```
 
+##### Instances
+``` purescript
+instance clientrect :: ClientRect ClientRect
+```
+
 

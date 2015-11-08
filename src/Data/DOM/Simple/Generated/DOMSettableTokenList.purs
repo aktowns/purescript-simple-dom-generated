@@ -19,3 +19,8 @@ class DOMSettableTokenList a where
   -- inherited:
 
 
+instance domsettabletokenlist :: DOMSettableTokenList DOMSettableTokenList where
+  getValue = getValueImpl
+  setValue = setValueImpl
+
+

@@ -16,6 +16,9 @@ foreign import appendDataImpl :: forall eff a. a -> String -> Eff (dom :: DOM | 
 foreign import insertDataImpl :: forall eff a. a -> Int -> String -> Eff (dom :: DOM | eff) (Unit)
 foreign import deleteDataImpl :: forall eff a. a -> Int -> Int -> Eff (dom :: DOM | eff) (Unit)
 foreign import replaceDataImpl :: forall eff a. a -> Int -> Int -> String -> Eff (dom :: DOM | eff) (Unit)
+foreign import getPreviousElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Element)
+foreign import getNextElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Element)
+foreign import removeImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Unit)
 
 class CharacterData a where
   getData :: forall eff. a -> Eff (dom :: DOM | eff) (String)
@@ -31,5 +34,19 @@ class CharacterData a where
   getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) (Element)
   remove :: forall eff. a -> Eff (dom :: DOM | eff) (Unit)
   -- inherited:
+
+
+instance characterdata :: CharacterData CharacterData where
+  getData = getDataImpl
+  setData = setDataImpl
+  getLength = getLengthImpl
+  substringData = substringDataImpl
+  appendData = appendDataImpl
+  insertData = insertDataImpl
+  deleteData = deleteDataImpl
+  replaceData = replaceDataImpl
+  getPreviousElementSibling = getPreviousElementSiblingImpl
+  getNextElementSibling = getNextElementSiblingImpl
+  remove = removeImpl
 
 

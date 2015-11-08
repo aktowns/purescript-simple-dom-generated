@@ -38,3 +38,18 @@ class TreeWalker a where
   -- inherited:
 
 
+instance treewalker :: TreeWalker TreeWalker where
+  getRoot = getRootImpl
+  getWhatToShow = getWhatToShowImpl
+  getFilter = getFilterImpl
+  getCurrentNode = getCurrentNodeImpl
+  setCurrentNode = setCurrentNodeImpl
+  parentNode = parentNodeImpl
+  firstChild = firstChildImpl
+  lastChild = lastChildImpl
+  previousSibling = previousSiblingImpl
+  nextSibling = nextSiblingImpl
+  previousNode = previousNodeImpl
+  nextNode = nextNodeImpl
+
+

@@ -13,4 +13,9 @@ class Iterator a where
   next :: forall eff anyVal. a -> anyVal -> Eff (dom :: DOM | eff) anyVal
 ```
 
+##### Instances
+``` purescript
+instance iterator :: Iterator Iterator
+```
+
 

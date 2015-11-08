@@ -16,3 +16,7 @@ class ChildNode a where
   -- inherited:
 
 
+instance childnode :: ChildNode ChildNode where
+  remove = removeImpl
+
+

@@ -18,6 +18,12 @@ getPublicIdImpl :: forall eff a. a -> Eff (dom :: DOM | eff) String
 getSystemIdImpl :: forall eff a. a -> Eff (dom :: DOM | eff) String
 ```
 
+#### `removeImpl`
+
+``` purescript
+removeImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Unit
+```
+
 #### `DocumentType`
 
 ``` purescript
@@ -26,6 +32,11 @@ class DocumentType a where
   getPublicId :: forall eff. a -> Eff (dom :: DOM | eff) String
   getSystemId :: forall eff. a -> Eff (dom :: DOM | eff) String
   remove :: forall eff. a -> Eff (dom :: DOM | eff) Unit
+```
+
+##### Instances
+``` purescript
+instance documenttype :: DocumentType DocumentType
 ```
 
 

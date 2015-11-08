@@ -15,3 +15,6 @@ class Uint32Array a where
   -- inherited:
 
 
+instance uint32array :: Uint32Array Uint32Array where
+
+

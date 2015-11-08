@@ -41,4 +41,9 @@ class MessagePort a where
   setOnmessage :: forall eff. EventHandler -> Eff (dom :: DOM | eff) Unit
 ```
 
+##### Instances
+``` purescript
+instance messageport :: MessagePort MessagePort
+```
+
 

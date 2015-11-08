@@ -90,4 +90,9 @@ class TreeWalker a where
   nextNode :: forall eff. a -> Eff (dom :: DOM | eff) (Maybe Node)
 ```
 
+##### Instances
+``` purescript
+instance treewalker :: TreeWalker TreeWalker
+```
+
 

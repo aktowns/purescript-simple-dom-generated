@@ -13,4 +13,9 @@ class NodeFilter a where
   acceptNode :: forall eff. a -> Node -> Eff (dom :: DOM | eff) Int
 ```
 
+##### Instances
+``` purescript
+instance nodefilter :: NodeFilter NodeFilter
+```
+
 

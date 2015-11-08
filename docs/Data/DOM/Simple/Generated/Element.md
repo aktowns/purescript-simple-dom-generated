@@ -528,6 +528,60 @@ getOnwheelImpl :: forall eff a. a -> Eff (dom :: DOM | eff) EventHandler
 setOnwheelImpl :: forall eff a. EventHandler -> Eff (dom :: DOM | eff) Unit
 ```
 
+#### `getPreviousElementSiblingImpl`
+
+``` purescript
+getPreviousElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Element
+```
+
+#### `getNextElementSiblingImpl`
+
+``` purescript
+getNextElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Element
+```
+
+#### `removeImpl`
+
+``` purescript
+removeImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Unit
+```
+
+#### `getChildrenImpl`
+
+``` purescript
+getChildrenImpl :: forall eff a. a -> Eff (dom :: DOM | eff) HTMLCollection
+```
+
+#### `getFirstElementChildImpl`
+
+``` purescript
+getFirstElementChildImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Maybe Element)
+```
+
+#### `getLastElementChildImpl`
+
+``` purescript
+getLastElementChildImpl :: forall eff a. a -> Eff (dom :: DOM | eff) (Maybe Element)
+```
+
+#### `getChildElementCountImpl`
+
+``` purescript
+getChildElementCountImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Int
+```
+
+#### `querySelectorImpl`
+
+``` purescript
+querySelectorImpl :: forall eff a. a -> String -> Eff (dom :: DOM | eff) (Maybe Element)
+```
+
+#### `querySelectorAllImpl`
+
+``` purescript
+querySelectorAllImpl :: forall eff a. a -> String -> Eff (dom :: DOM | eff) NodeList
+```
+
 #### `Element`
 
 ``` purescript
@@ -629,6 +683,11 @@ class Element a where
   getChildElementCount :: forall eff. a -> Eff (dom :: DOM | eff) Int
   querySelector :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Maybe Element)
   querySelectorAll :: forall eff. a -> String -> Eff (dom :: DOM | eff) NodeList
+```
+
+##### Instances
+``` purescript
+instance element :: Element Element
 ```
 
 

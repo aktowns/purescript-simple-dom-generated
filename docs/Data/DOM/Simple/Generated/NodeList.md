@@ -20,4 +20,9 @@ class NodeList a where
   getLength :: forall eff. a -> Eff (dom :: DOM | eff) Int
 ```
 
+##### Instances
+``` purescript
+instance nodelist :: NodeList NodeList
+```
+
 

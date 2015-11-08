@@ -20,4 +20,9 @@ class MessageChannel a where
   getPort2 :: forall eff. a -> Eff (dom :: DOM | eff) MessagePort
 ```
 
+##### Instances
+``` purescript
+instance messagechannel :: MessageChannel MessageChannel
+```
+
 

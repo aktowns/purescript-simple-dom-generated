@@ -62,4 +62,9 @@ class DOMRect a where
   setHeight :: forall eff. Int -> Eff (dom :: DOM | eff) Unit
 ```
 
+##### Instances
+``` purescript
+instance domrect :: DOMRect DOMRect
+```
+
 

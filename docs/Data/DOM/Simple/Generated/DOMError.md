@@ -20,4 +20,9 @@ class DOMError a where
   getMessage :: forall eff. a -> Eff (dom :: DOM | eff) String
 ```
 
+##### Instances
+``` purescript
+instance domerror :: DOMError DOMError
+```
+
 

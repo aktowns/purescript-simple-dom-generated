@@ -90,3 +90,35 @@ class Node a where
   -- inherited:
 
 
+instance node :: Node Node where
+  getNodeType = getNodeTypeImpl
+  getNodeName = getNodeNameImpl
+  getBaseURI = getBaseURIImpl
+  getOwnerDocument = getOwnerDocumentImpl
+  getParentNode = getParentNodeImpl
+  getParentElement = getParentElementImpl
+  hasChildNodes = hasChildNodesImpl
+  getChildNodes = getChildNodesImpl
+  getFirstChild = getFirstChildImpl
+  getLastChild = getLastChildImpl
+  getPreviousSibling = getPreviousSiblingImpl
+  getNextSibling = getNextSiblingImpl
+  getNodeValue = getNodeValueImpl
+  setNodeValue = setNodeValueImpl
+  getTextContent = getTextContentImpl
+  setTextContent = setTextContentImpl
+  normalize = normalizeImpl
+  cloneNode = cloneNodeImpl
+  isEqualNode = isEqualNodeImpl
+  compareDocumentPosition = compareDocumentPositionImpl
+  contains = containsImpl
+  lookupPrefix = lookupPrefixImpl
+  lookupNamespaceURI = lookupNamespaceURIImpl
+  isDefaultNamespace = isDefaultNamespaceImpl
+  insertBefore = insertBeforeImpl
+  appendChild = appendChildImpl
+  replaceChild = replaceChildImpl
+  removeChild = removeChildImpl
+  isSameNode = isSameNodeImpl
+
+

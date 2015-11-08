@@ -19,3 +19,8 @@ class ClientRectList a where
   -- inherited:
 
 
+instance clientrectlist :: ClientRectList ClientRectList where
+  getLength = getLengthImpl
+  item = itemImpl
+
+

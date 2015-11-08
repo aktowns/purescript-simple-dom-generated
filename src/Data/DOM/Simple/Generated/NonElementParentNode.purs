@@ -16,3 +16,7 @@ class NonElementParentNode a where
   -- inherited:
 
 
+instance nonelementparentnode :: NonElementParentNode NonElementParentNode where
+  getElementById = getElementByIdImpl
+
+

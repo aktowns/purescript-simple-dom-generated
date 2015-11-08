@@ -27,4 +27,9 @@ class MutationObserver a where
   takeRecords :: forall eff. a -> Eff (dom :: DOM | eff) (Array MutationRecord)
 ```
 
+##### Instances
+``` purescript
+instance mutationobserver :: MutationObserver MutationObserver
+```
+
 

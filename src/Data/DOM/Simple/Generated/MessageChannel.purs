@@ -18,3 +18,8 @@ class MessageChannel a where
   -- inherited:
 
 
+instance messagechannel :: MessageChannel MessageChannel where
+  getPort1 = getPort1Impl
+  getPort2 = getPort2Impl
+
+

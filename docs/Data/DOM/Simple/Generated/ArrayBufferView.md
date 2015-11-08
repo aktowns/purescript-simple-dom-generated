@@ -27,4 +27,9 @@ class ArrayBufferView a where
   getByteLength :: forall eff. a -> Eff (dom :: DOM | eff) Int
 ```
 
+##### Instances
+``` purescript
+instance arraybufferview :: ArrayBufferView ArrayBufferView
+```
+
 

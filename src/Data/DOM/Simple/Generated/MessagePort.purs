@@ -24,3 +24,11 @@ class MessagePort a where
   -- inherited:
 
 
+instance messageport :: MessagePort MessagePort where
+  postMessage = postMessageImpl
+  start = startImpl
+  close = closeImpl
+  getOnmessage = getOnmessageImpl
+  setOnmessage = setOnmessageImpl
+
+

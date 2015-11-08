@@ -13,4 +13,9 @@ class NonElementParentNode a where
   getElementById :: forall eff. a -> String -> Eff (dom :: DOM | eff) (Maybe Element)
 ```
 
+##### Instances
+``` purescript
+instance nonelementparentnode :: NonElementParentNode NonElementParentNode
+```
+
 

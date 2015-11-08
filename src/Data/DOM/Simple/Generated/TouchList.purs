@@ -18,3 +18,8 @@ class TouchList a where
   -- inherited:
 
 
+instance touchlist :: TouchList TouchList where
+  getLength = getLengthImpl
+  item = itemImpl
+
+

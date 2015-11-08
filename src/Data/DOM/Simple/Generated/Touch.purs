@@ -38,3 +38,18 @@ class Touch a where
   -- inherited:
 
 
+instance touch :: Touch Touch where
+  getIdentifier = getIdentifierImpl
+  getTarget = getTargetImpl
+  getScreenX = getScreenXImpl
+  getScreenY = getScreenYImpl
+  getClientX = getClientXImpl
+  getClientY = getClientYImpl
+  getPageX = getPageXImpl
+  getPageY = getPageYImpl
+  getRadiusX = getRadiusXImpl
+  getRadiusY = getRadiusYImpl
+  getRotationAngle = getRotationAngleImpl
+  getForce = getForceImpl
+
+

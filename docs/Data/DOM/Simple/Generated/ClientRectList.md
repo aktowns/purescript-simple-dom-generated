@@ -20,4 +20,9 @@ class ClientRectList a where
   item :: forall eff. a -> Int -> Eff (dom :: DOM | eff) ClientRect
 ```
 
+##### Instances
+``` purescript
+instance clientrectlist :: ClientRectList ClientRectList
+```
+
 

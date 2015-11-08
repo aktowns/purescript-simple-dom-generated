@@ -114,3 +114,56 @@ class DOMMatrix a where
   -- inherited:
 
 
+instance dommatrix :: DOMMatrix DOMMatrix where
+  getA = getAImpl
+  setA = setAImpl
+  getB = getBImpl
+  setB = setBImpl
+  getC = getCImpl
+  setC = setCImpl
+  getD = getDImpl
+  setD = setDImpl
+  getE = getEImpl
+  setE = setEImpl
+  getF = getFImpl
+  setF = setFImpl
+  getM11 = getM11Impl
+  setM11 = setM11Impl
+  getM12 = getM12Impl
+  setM12 = setM12Impl
+  getM13 = getM13Impl
+  setM13 = setM13Impl
+  getM14 = getM14Impl
+  setM14 = setM14Impl
+  getM21 = getM21Impl
+  setM21 = setM21Impl
+  getM22 = getM22Impl
+  setM22 = setM22Impl
+  getM23 = getM23Impl
+  setM23 = setM23Impl
+  getM24 = getM24Impl
+  setM24 = setM24Impl
+  getM31 = getM31Impl
+  setM31 = setM31Impl
+  getM32 = getM32Impl
+  setM32 = setM32Impl
+  getM33 = getM33Impl
+  setM33 = setM33Impl
+  getM34 = getM34Impl
+  setM34 = setM34Impl
+  getM41 = getM41Impl
+  setM41 = setM41Impl
+  getM42 = getM42Impl
+  setM42 = setM42Impl
+  getM43 = getM43Impl
+  setM43 = setM43Impl
+  getM44 = getM44Impl
+  setM44 = setM44Impl
+  multiplySelf = multiplySelfImpl
+  preMultiplySelf = preMultiplySelfImpl
+  translateSelf = translateSelfImpl
+  scaleSelf = scaleSelfImpl
+  scale3dSelf = scale3dSelfImpl
+  scaleNonUniformSelf = scaleNonUniformSelfImpl
+
+

@@ -15,3 +15,6 @@ class Uint16Array a where
   -- inherited:
 
 
+instance uint16array :: Uint16Array Uint16Array where
+
+

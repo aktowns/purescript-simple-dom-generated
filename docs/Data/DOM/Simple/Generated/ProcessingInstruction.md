@@ -12,6 +12,24 @@ getTargetImpl :: forall eff a. a -> Eff (dom :: DOM | eff) String
 getSheetImpl :: forall eff a. a -> Eff (dom :: DOM | eff) StyleSheet
 ```
 
+#### `getPreviousElementSiblingImpl`
+
+``` purescript
+getPreviousElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Element
+```
+
+#### `getNextElementSiblingImpl`
+
+``` purescript
+getNextElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Element
+```
+
+#### `removeImpl`
+
+``` purescript
+removeImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Unit
+```
+
 #### `ProcessingInstruction`
 
 ``` purescript
@@ -21,6 +39,11 @@ class ProcessingInstruction a where
   getPreviousElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) Element
   getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) Element
   remove :: forall eff. a -> Eff (dom :: DOM | eff) Unit
+```
+
+##### Instances
+``` purescript
+instance processinginstruction :: ProcessingInstruction ProcessingInstruction
 ```
 
 

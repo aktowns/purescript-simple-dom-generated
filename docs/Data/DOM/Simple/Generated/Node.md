@@ -209,4 +209,9 @@ class Node a where
   isSameNode :: forall eff. a -> Maybe Node -> Eff (dom :: DOM | eff) Boolean
 ```
 
+##### Instances
+``` purescript
+instance node :: Node Node
+```
+
 

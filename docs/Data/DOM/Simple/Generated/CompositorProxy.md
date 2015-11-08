@@ -76,4 +76,9 @@ class CompositorProxy a where
   disconnect :: forall eff. a -> Eff (dom :: DOM | eff) Unit
 ```
 
+##### Instances
+``` purescript
+instance compositorproxy :: CompositorProxy CompositorProxy
+```
+
 

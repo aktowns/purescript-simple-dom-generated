@@ -216,4 +216,9 @@ class Range a where
   expand :: forall eff. a -> String -> Eff (dom :: DOM | eff) Unit
 ```
 
+##### Instances
+``` purescript
+instance range :: Range Range
+```
+
 

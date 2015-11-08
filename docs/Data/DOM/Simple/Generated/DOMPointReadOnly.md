@@ -34,4 +34,9 @@ class DOMPointReadOnly a where
   getW :: forall eff. a -> Eff (dom :: DOM | eff) Int
 ```
 
+##### Instances
+``` purescript
+instance dompointreadonly :: DOMPointReadOnly DOMPointReadOnly
+```
+
 

@@ -48,6 +48,24 @@ deleteDataImpl :: forall eff a. a -> Int -> Int -> Eff (dom :: DOM | eff) Unit
 replaceDataImpl :: forall eff a. a -> Int -> Int -> String -> Eff (dom :: DOM | eff) Unit
 ```
 
+#### `getPreviousElementSiblingImpl`
+
+``` purescript
+getPreviousElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Element
+```
+
+#### `getNextElementSiblingImpl`
+
+``` purescript
+getNextElementSiblingImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Element
+```
+
+#### `removeImpl`
+
+``` purescript
+removeImpl :: forall eff a. a -> Eff (dom :: DOM | eff) Unit
+```
+
 #### `CharacterData`
 
 ``` purescript
@@ -63,6 +81,11 @@ class CharacterData a where
   getPreviousElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) Element
   getNextElementSibling :: forall eff. a -> Eff (dom :: DOM | eff) Element
   remove :: forall eff. a -> Eff (dom :: DOM | eff) Unit
+```
+
+##### Instances
+``` purescript
+instance characterdata :: CharacterData CharacterData
 ```
 
 

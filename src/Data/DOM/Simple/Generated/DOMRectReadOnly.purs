@@ -30,3 +30,14 @@ class DOMRectReadOnly a where
   -- inherited:
 
 
+instance domrectreadonly :: DOMRectReadOnly DOMRectReadOnly where
+  getX = getXImpl
+  getY = getYImpl
+  getWidth = getWidthImpl
+  getHeight = getHeightImpl
+  getTop = getTopImpl
+  getRight = getRightImpl
+  getBottom = getBottomImpl
+  getLeft = getLeftImpl
+
+

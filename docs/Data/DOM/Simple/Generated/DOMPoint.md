@@ -62,4 +62,9 @@ class DOMPoint a where
   setW :: forall eff. Int -> Eff (dom :: DOM | eff) Unit
 ```
 
+##### Instances
+``` purescript
+instance dompoint :: DOMPoint DOMPoint
+```
+
 
